@@ -9,6 +9,8 @@ ENV DEBIAN_FRONTEND=noninteractive \
 WORKDIR /app
 
 COPY requirements/requirements.txt requirements/requirements.txt
+COPY lib lib
+
 
 RUN pip install --no-cache-dir -r requirements/requirements.txt
 
