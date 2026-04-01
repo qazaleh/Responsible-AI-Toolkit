@@ -7,7 +7,8 @@ ENV DEBIAN_FRONTEND=noninteractive \
 
 WORKDIR /app
 
-# Copy requirements first for layer caching
+# Copy lib directory and requirements for layer caching
+COPY lib/ lib/
 COPY requirements/requirements.txt requirements.txt
 
 RUN pip install --no-cache-dir -r requirements.txt
