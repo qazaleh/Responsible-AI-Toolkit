@@ -70,3 +70,13 @@ htmlcov/
 logs/
 *.log
 mvp-evaluation-artifacts/
+
+# Local tooling
+.codex
+.codex/
+
+# Generated fairness outputs
+responsible-ai-fairness/responsible-ai-fairness/output/sample*.json
+responsible-ai-fairness/responsible-ai-fairness/output/fairness_report*.html
+responsible-ai-fairness/responsible-ai-fairness/output/UIanalyse*.txt
+responsible-ai-fairness/responsible-ai-fairness/output/UIPretrainMitigation*.txt
