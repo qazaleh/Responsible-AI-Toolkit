@@ -23,7 +23,9 @@ from app.constants.local_constants  import SPACE_DELIMITER,PLACEHOLDER_TEXT,USEC
 from app.constants import global_constants
 
 from abc import ABC
+from fastapi.encoders import jsonable_encoder
 from fastapi.exceptions import RequestValidationError
+from fastapi.responses import JSONResponse
 
 class aiShieldException(Exception, ABC):
     """

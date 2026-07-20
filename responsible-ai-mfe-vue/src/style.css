@@ -182,4 +182,36 @@ textarea {
     background: #faf7f0;
     color: rgba(48, 86, 105, 0.72);
   }
+
+  .ps-btn-primary {
+    @apply inline-flex h-10 shrink-0 items-center justify-center gap-2 rounded-lg bg-[#305669] px-4 text-sm font-medium text-white transition-colors hover:bg-[#244455] disabled:pointer-events-none disabled:opacity-50;
+  }
+
+  .ps-btn-outline {
+    @apply inline-flex h-9 shrink-0 items-center justify-center gap-2 rounded-lg border border-[#e6dece] bg-[#fffdf8] px-3 text-sm font-medium text-[#305669] transition-colors hover:bg-[#faf7f0] disabled:pointer-events-none disabled:opacity-50;
+  }
+
+  .ps-btn-outline-danger {
+    @apply inline-flex h-9 shrink-0 items-center justify-center gap-2 rounded-lg border border-red-200 bg-[#fffdf8] px-3 text-sm font-medium text-red-700 transition-colors hover:bg-red-50 disabled:pointer-events-none disabled:opacity-50;
+  }
+
+  .ps-btn-sm {
+    @apply inline-flex h-8 shrink-0 items-center justify-center gap-1.5 rounded-lg border border-[#e6dece] bg-[#fffdf8] px-2.5 text-xs font-medium text-[#305669] transition-colors hover:bg-[#faf7f0] disabled:pointer-events-none disabled:opacity-50;
+  }
+
+  .ps-btn-sm-danger {
+    @apply inline-flex h-8 shrink-0 items-center justify-center gap-1.5 rounded-lg border border-red-200 bg-[#fffdf8] px-2.5 text-xs font-medium text-red-700 transition-colors hover:bg-red-50;
+  }
+
+  .ps-tab-list {
+    @apply inline-flex h-auto w-full flex-wrap items-center gap-1 rounded-lg bg-[#faeab1] p-1;
+  }
+
+  .ps-tab-trigger {
+    @apply h-9 min-w-fit rounded-md px-3 text-sm font-medium capitalize text-[#0f2b2c]/60 transition-colors hover:text-[#0f2b2c];
+  }
+
+  .ps-tab-trigger-active {
+    @apply bg-[#fffdf8] text-[#0f2b2c] shadow-sm;
+  }
 }
