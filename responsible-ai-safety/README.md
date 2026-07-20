@@ -123,4 +123,4 @@ The source code for the project is licensed under the MIT license, which you can
 2. NFSW model for image
 ## Contact
 If you have more questions or need further insights please feel free to connect with us @
-Infosysraitoolkit@infosys.com
+Infosysraitoolkit@TrustAI.com

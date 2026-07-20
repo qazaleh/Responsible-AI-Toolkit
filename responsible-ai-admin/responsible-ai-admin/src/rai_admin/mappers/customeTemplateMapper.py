@@ -1,6 +1,6 @@
 """
 # SPDX-License-Identifier: MIT
-# Copyright 2024 - 2025 Infosys Ltd.
+# Copyright 2024 - 2025 TrustAI Ltd.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
  
@@ -76,7 +76,7 @@ class CustomeTemplateRes(BaseModel):
 
 class AccTempMapReq(BaseModel):
         userId:str=Field(example="123")
-        portfolio:str=Field(example="Infosys")
+        portfolio:str=Field(example="TrustAI")
         account:str=Field(example="IMPACT")
         category:str
         subcategory:str
@@ -86,18 +86,18 @@ class AccTempMapReq(BaseModel):
 
 class AccModMapsReq(BaseModel):
         userId:str=Field(example="123")
-        portfolio:str=Field(example="Infosys")
+        portfolio:str=Field(example="TrustAI")
         account:str=Field(example="IMPACT")
 
 class ModMapReq(BaseModel):
         category:str=Field(example="SingleModel")
-        portfolio:str=Field(example="Infosys")
+        portfolio:str=Field(example="TrustAI")
         account:str=Field(example="IMPACT")
         
 class ModConfigReq(BaseModel):
         category:str=Field(example="SingleModel")
         subcategory:str=Field(example="Template")
-        portfolio:str=Field(example="Infosys")
+        portfolio:str=Field(example="TrustAI")
         account:str=Field(example="IMPACT")
         
 class AccTempMapv(BaseModel):
@@ -109,7 +109,7 @@ class AccTempMapv(BaseModel):
        
         userId:str=Field(example="123")
         
-        portfolio:str=Field(example="Infosys")
+        portfolio:str=Field(example="TrustAI")
         account:str=Field(example="IMPACT")
         category:str=Field(example="SingleModel")
         subcategory:str=Field(example="Template")
@@ -124,13 +124,13 @@ class AccTempMap(BaseModel):
         
 class TempMapDelete(BaseModel):
         userId:str=Field(example="123")
-        portfolio:str=Field(example="Infosys")
+        portfolio:str=Field(example="TrustAI")
         account:str=Field(example="IMPACT")
      
 class AddTempMap(BaseModel):
         # mapId:str=Field(example="123")
         userId:str=Field(example="123")
-        portfolio:str=Field(example="Infosys")
+        portfolio:str=Field(example="TrustAI")
         account:str=Field(example="IMPACT")
         category:str=Field(example="SingleModel")
         subcategory:str=Field(example="Template")
@@ -142,7 +142,7 @@ class AddTempMap(BaseModel):
 class RemoveTempMap(BaseModel):
         # mapId:str=Field(example="123")
         userId:str=Field(example="123")
-        portfolio:str=Field(example="Infosys")
+        portfolio:str=Field(example="TrustAI")
         account:str=Field(example="IMPACT")
         category:str=Field(example="SingleModel")
         subcategory:str=Field(example="Template")

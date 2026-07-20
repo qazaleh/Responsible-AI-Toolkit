@@ -1,5 +1,5 @@
 '''
-MIT license https://opensource.org/licenses/MIT Copyright 2024 Infosys Ltd
+MIT license https://opensource.org/licenses/MIT Copyright 2024 TrustAI Ltd
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -57,7 +57,7 @@ class PIIAnalyzeRequest(BaseModel):
     # portfolio:Optional[str] = Field(example="string")
     # account:Optional[str] = Field(example="string")
     # piiEntitiesToBeRedacted: Optional[list] = Field(example=["US_SSN"])
-    # exclusionList:Optional[str] = Field(example="Karan,Infosys")
+    # exclusionList:Optional[str] = Field(example="Karan,TrustAI")
     # user: Optional[str] = Field(None)
     # lotNumber:Optional[str] = Field(None)
     portfolio:Optional[str] = Field(default=None)

@@ -1,6 +1,6 @@
 """
 # SPDX-License-Identifier: MIT
-# Copyright 2024 - 2025 Infosys Ltd.
+# Copyright 2024 - 2025 TrustAI Ltd.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
  
@@ -11,8 +11,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 from fairness.dao.bias_model import Bias, TrainingDataset, PredictionDataset
 from fairness.dao.mitigation_model import Mitigation, TrainingDataset
-from infosys_responsible_ai_fairness.responsible_ai_fairness import BiasResult, DataList, MitigationResult, PRETRAIN, utils, StandardDataset
-from infosys_responsible_ai_fairness.responsible_ai_fairness import metricsEntity as me
+from TrustAI_responsible_ai_fairness.responsible_ai_fairness import BiasResult, DataList, MitigationResult, PRETRAIN, utils, StandardDataset
+from TrustAI_responsible_ai_fairness.responsible_ai_fairness import metricsEntity as me
 import numpy as np
 from bson import ObjectId
 from fairness.dao.individual_fairness import Individual_Fairness

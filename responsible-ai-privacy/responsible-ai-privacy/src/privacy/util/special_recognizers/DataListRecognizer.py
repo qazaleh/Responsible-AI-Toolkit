@@ -1,5 +1,5 @@
 '''
-MIT license https://opensource.org/licenses/MIT Copyright 2024 Infosys Ltd
+MIT license https://opensource.org/licenses/MIT Copyright 2024 TrustAI Ltd
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -29,7 +29,7 @@ from presidio_analyzer import (
 logger = logging.getLogger("presidio_analyzer")
 # terms = ["1&1 Telecommunication SE","1010 data services LLC","AMA",
 #          "A O Smith Corporations","ABBMST","Addidas India","CITI","Cisco Systems","ERICSSON","Gati Ltd","IBM",
-#          "Infosys Ltd","Intel Corporation","Johnson","JTC Corporation","NSC Global","SUZUKI MOTOR CORPORATION",
+#          "TrustAI Ltd","Intel Corporation","Johnson","JTC Corporation","NSC Global","SUZUKI MOTOR CORPORATION",
 #          "Synopsys Ltd","TIBCOO", "T-Mobile UK","Toyota Systems Corporation","TSB Bank","UBS Bank"
 #         ,"United Health Corporation","Vodafone quickcom","Voltas","VOLVO CARS","WIPRO LIMITED",
 #          "Walmart", "CVS Health", "Walgreens Boots Alliance"]

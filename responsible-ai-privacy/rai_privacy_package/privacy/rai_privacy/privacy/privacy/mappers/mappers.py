@@ -1,5 +1,5 @@
 '''
-MIT license https://opensource.org/licenses/MIT Copyright 2024 Infosys Ltd
+MIT license https://opensource.org/licenses/MIT Copyright 2024 TrustAI Ltd
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -44,7 +44,7 @@ class PIIAnalyzeRequest(BaseModel):
     # entity_type: Optional[str] = Field(example="COMPANY_NAME")
     portfolio:Optional[str] = Field(example="string")
     account:Optional[str] = Field(example="string")
-    exclusionList:Optional[str] = Field(example="Karan,Infosys")
+    exclusionList:Optional[str] = Field(example="Karan,TrustAI")
     user: str = Field(example = "admin")
     
 
@@ -60,7 +60,7 @@ class PIIAnonymizeRequest(BaseModel):
     inputText: str = Field(example="John Smith's SSN is 012884567")
     portfolio:Optional[str] = Field(example="string")
     account:Optional[str] = Field(example="string")
-    exclusionList:Optional[str] = Field(example="Karan,Infosys")
+    exclusionList:Optional[str] = Field(example="Karan,TrustAI")
     piiEntitiesToBeRedacted: Optional[list] = Field(example=["US_SSN"])
     redactionType: Optional[str] = Field(example='replace')
     user: str = Field(example = "admin")

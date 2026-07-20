@@ -1,1 +1,13 @@
-import setuptoolssetuptools.setup(                 name='presidio_analyzer',                 version='4.1.0',                 author='Amit Hegde',                 author_email='amitumamaheshwar.h@infosys.com',                 description='Infosys Intelligent Assistant',                 long_description='Infosys Intelligent Assistant',                 classifiers=['Programming Language :: Python :: 3', 'License :: OSI Approved :: MIT License', 'Operating System :: OS Independent'],                 package_dir={'': 'presidio_analyzer'},                 packages=setuptools.find_packages(where='presidio_analyzer'),                 python_requires='>=3.6',                 )
+import setuptoolsTrustAI
+setuptools.setup(
+                 name='presidio_analyzer',
+                 version='4.1.0',
+                 author='Amit Hegde',
+                 author_email='amitumamaheshwar.h@infosys.com',
+                 description='TrustAI Intelligent Assistant',
+                 long_description='TrustAI Intelligent Assistant',
+                 classifiers=['Programming Language :: Python :: 3', 'License :: OSI Approved :: MIT License', 'Operating System :: OS Independent'],
+                 package_dir={'': 'presidio_analyzer'},
+                 packages=setuptools.find_packages(where='presidio_analyzer'),
+                 python_requires='>=3.6',
+                 )

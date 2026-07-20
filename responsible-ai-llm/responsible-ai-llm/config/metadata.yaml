@@ -1,4 +1,4 @@
-# Copyright 2024-2025 Infosys Ltd.
+# Copyright 2024-2025 TrustAI Ltd.
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), 
 # to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, 
@@ -15,10 +15,10 @@
 
 openapi_url: /rai/v1/llm/openapi.json
 docs_url: /rai/v1/llm/docs
-title: Infosys Responsible AI - responsible-ai-llm - OpenAPI 3.0
-description: API specs for Infosys Responsible AI llm pillar in OpenAPI 3.0 format
+title: TrustAI Responsible AI - responsible-ai-llm - OpenAPI 3.0
+description: API specs for TrustAI Responsible AI llm pillar in OpenAPI 3.0 format
 contact:
-    email: infosysraitoolkit@infosys.com
+    email: TrustAIraitoolkit@TrustAI.com
 version: v$version
 openapi_tags:
     - name: Large Language Models

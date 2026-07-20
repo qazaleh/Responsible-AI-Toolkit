@@ -1,14 +1,14 @@
 {
   "openapi": "3.0.3",
   "info": {
-    "title": "Infosys Responsible AI - LLM Moderation Models - OpenAPI 3.0",
-    "description": "API specs for Infosys Responsible AI LLM Moderation layer Models in OpenAPI 3.0 format",
+    "title": "TrustAI Responsible AI - LLM Moderation Models - OpenAPI 3.0",
+    "description": "API specs for TrustAI Responsible AI LLM Moderation layer Models in OpenAPI 3.0 format",
     "contact": {
-      "email": "aina@infosys.com"
+      "email": "aina@TrustAI.com"
     },
     "license": {
-      "name": "Infosys",
-      "url": "https://www.infosys.com"
+      "name": "TrustAI",
+      "url": "https://www.TrustAI.com"
     },
     "version": "0.0.1"
   },
@@ -23,7 +23,7 @@
             "my_auth": ["write:users"]
         }],
         "tags": [
-          "Infosys Responsible AI - LLM Moderation"
+          "TrustAI Responsible AI - LLM Moderation"
         ],
         "summary": "Toxic Model",
         "operationId": "toxic_model_rai_v1_models_detoxifymodel_post",
@@ -89,7 +89,7 @@
             "my_auth": ["write:users"]
         }],
         "tags": [
-          "Infosys Responsible AI - LLM Moderation"
+          "TrustAI Responsible AI - LLM Moderation"
         ],
         "summary": "Pii Check",
         "operationId": "pii_check_rai_v1_models_privacy_post",
@@ -153,7 +153,7 @@
             "my_auth": ["write:users"]
         }],
         "tags": [
-          "Infosys Responsible AI - LLM Moderation"
+          "TrustAI Responsible AI - LLM Moderation"
         ],
         "summary": "Prompt Model",
         "operationId": "prompt_model_rai_v1_models_promptinjectionmodel_post",
@@ -217,7 +217,7 @@
             "my_auth": ["write:users"]
         }],
         "tags": [
-          "Infosys Responsible AI - LLM Moderation"
+          "TrustAI Responsible AI - LLM Moderation"
         ],
         "summary": "Restrictedtopic Model",
         "operationId": "restrictedTopic_model_rai_v1_models_restrictedtopicmodel_post",
@@ -281,7 +281,7 @@
             "my_auth": ["write:users"]
         }],
         "tags": [
-          "Infosys Responsible AI - LLM Moderation"
+          "TrustAI Responsible AI - LLM Moderation"
         ],
         "summary": "Embedding Model",
         "operationId": "embedding_model_rai_v1_models_multi_q_net_embedding_post",
@@ -345,7 +345,7 @@
             "my_auth": ["write:users"]
         }],
         "tags": [
-          "Infosys Responsible AI - LLM Moderation"
+          "TrustAI Responsible AI - LLM Moderation"
         ],
         "summary": "Similarity Model",
         "operationId": "similarity_model_rai_v1_models_multi_qa_mpnet_model_similarity_post",
@@ -420,7 +420,7 @@
             "my_auth": ["write:users"]
         }],
         "tags": [
-          "Infosys Responsible AI - LLM Moderation"
+          "TrustAI Responsible AI - LLM Moderation"
         ],
         "summary": "Sentiment Model",
         "operationId": "sentiment_model_rai_v1_models_sentimentmodel_post",
@@ -484,7 +484,7 @@
             "my_auth": ["write:users"]
         }],
         "tags": [
-          "Infosys Responsible AI - LLM Moderation"
+          "TrustAI Responsible AI - LLM Moderation"
         ],
         "summary": "Sentiment Model",
         "operationId": "sentiment_model_rai_v1_models_invisibletextmodel_post",
@@ -548,7 +548,7 @@
             "my_auth": ["write:users"]
         }],
         "tags": [
-          "Infosys Responsible AI - LLM Moderation"
+          "TrustAI Responsible AI - LLM Moderation"
         ],
         "summary": "Gibberish Model",
         "operationId": "sentiment_model_rai_v1_models_gibberishmodel_post",
@@ -612,7 +612,7 @@
             "my_auth": ["write:users"]
         }],
         "tags": [
-          "Infosys Responsible AI - LLM Moderation"
+          "TrustAI Responsible AI - LLM Moderation"
         ],
         "summary": "Ban Code Model",
         "operationId": "sentiment_model_rai_v1_models_bancodemodel_post",
@@ -1025,7 +1025,7 @@
       "description": "Operations required for LLM moderation proxy.",
       "externalDocs": {
         "description": "Find out more",
-        "url": "https://www.infosys.com"
+        "url": "https://www.TrustAI.com"
       }
     }
   ]

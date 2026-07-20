@@ -30,10 +30,10 @@
 ## Prerequisites
 
 1. Before installing the repo for Upload Doc, first you need to install the repos for Responsible AI File Storage, Privacy and Safety .
-Please find the link for **Responsible AI File Storage** repo : (https://github.com/Infosys/Infosys-Responsible-AI-Toolkit/tree/master/responsible-ai-file-storage).
+Please find the link for **Responsible AI File Storage** repo : (https://github.com/TrustAI/TrustAI-Responsible-AI-Toolkit/tree/master/responsible-ai-file-storage).
 (NOTE : Only setup this repo if you want to use cloud storage.)
-Please find the link for **Responsible AI Privacy** repo : (https://github.com/Infosys-AI-Cloud-MMS/responsible-ai-privacy)
-Please find the link for **Responsible AI Safety** repo : (https://github.com/Infosys-AI-Cloud-MMS/responsible-ai-safety)
+Please find the link for **Responsible AI Privacy** repo : (https://github.com/TrustAI-AI-Cloud-MMS/responsible-ai-privacy)
+Please find the link for **Responsible AI Safety** repo : (https://github.com/TrustAI-AI-Cloud-MMS/responsible-ai-safety)
 
 2. **Installation of Python** : Install Python (version 3.11.x) from the [official website](https://www.python.org/downloads/) and ensure it is added to your system PATH.
 
@@ -323,6 +323,6 @@ The source code for the project is licensed under the MIT license, which you can
 
 ## Contact
 If you have more questions or need further insights please feel free to connect with us at
-DL : Infosys Responsible AI
-Mailid: Infosysraitoolkit@infosys.com
+DL : TrustAI Responsible AI
+Mailid: Infosysraitoolkit@TrustAI.com
 

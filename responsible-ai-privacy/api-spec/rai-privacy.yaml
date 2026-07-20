@@ -1,13 +1,13 @@
 openapi: 3.0.2
 info:
-  title: Infosys Responsible AI - responsible-ai-privacy - OpenAPI 3.0
-  description: API specs for Infosys Responsible AI Privacy pillar in OpenAPI 3.0 format
-  termsOfService: https://www.infosys.com
+  title: TrustAI Responsible AI - responsible-ai-privacy - OpenAPI 3.0
+  description: API specs for TrustAI Responsible AI Privacy pillar in OpenAPI 3.0 format
+  termsOfService: https://www.TrustAI.com
   contact:
-    email: aina@infosys.com
+    email: aina@TrustAI.com
   license:
-    name: Infosys
-    url: https://www.infosys.com
+    name: TrustAI
+    url: https://www.TrustAI.com
   version: v$version
 security:
   - oauth_auth:
@@ -386,4 +386,4 @@ tags:
     description: Operations required for a PII entity (e.g. IN_ADHAAR, IN_PAN, US_SSN etc)
     externalDocs:
       description: Find out more
-      url: https://www.infosys.com
+      url: https://www.TrustAI.com

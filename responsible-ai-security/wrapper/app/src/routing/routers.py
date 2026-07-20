@@ -1,6 +1,6 @@
 '''
 MIT license https://opensource.org/licenses/MIT
-Copyright 2024-2025 Infosys Ltd.
+Copyright 2024-2025 TrustAI Ltd.
  
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
  
@@ -13,7 +13,7 @@ import datetime
 from fastapi import Depends,APIRouter,Query, Body,Form,HTTPException
 from fastapi.responses import FileResponse, HTMLResponse
 from src.mappers.mappers import GetAttackDataRequest
-from src.service.service import Infosys, Bulk
+from src.service.service import TrustAI, Bulk
 from src.service.utility import Utility as UT
 from src.config.logger import CustomLogger
 from typing import Dict, Optional
@@ -31,7 +31,7 @@ async def get_attacks(TargetClassifier:str=Form(),TargetDataType:str=Form()):
     try:
         # payload = {'targetClassifier': target_classifier, 'targetDataType': target_data_type}
         payload = {'targetClassifier': TargetClassifier, 'targetDataType': TargetDataType}
-        response = Infosys.getAttackFuncs(payload)
+        response = TrustAI.getAttackFuncs(payload)
         gc.collect()
         return response
     except Exception as e:
@@ -42,7 +42,7 @@ async def get_attacks(TargetClassifier:str=Form(),TargetDataType:str=Form()):
 @attack.post('/rai/v1/security_workbench/addattack')
 async def add_Attack(Payload: GetAttackDataRequest):
     try:
-        response = Infosys.addAttack(Payload)
+        response = TrustAI.addAttack(Payload)
         gc.collect()
         return response
     except Exception as e:
@@ -54,7 +54,7 @@ async def add_Attack(Payload: GetAttackDataRequest):
 async def delete_Attack(AttacFunc: str):
     try:
         payload = {'attackName': AttacFunc}
-        response = Infosys.deleteAttack(payload)
+        response = TrustAI.deleteAttack(payload)
         gc.collect()
         return response
     except Exception as e:

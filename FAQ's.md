@@ -1,6 +1,6 @@
 # FAQs  
 
-Below are some frequently asked questions to use `Infosys-Responsible-AI-Toolkit` repositories.  
+Below are some frequently asked questions to use `TrustAI-Responsible-AI-Toolkit` repositories.  
 
 ## How can I avoid issues with long file paths when extracting a ZIP file?  
  

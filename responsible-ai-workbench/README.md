@@ -17,11 +17,11 @@ The workbench repository is used for processing and generating report for Unstru
 
 ## Prerequisites
 1. Before installing the repo for Workbench, first you need to install the repos for Responsible AI File Storage, Privacy,Moderation layer, Explainability and Safety . 
-Please find the link for Responsible AI File Storage repo : [File Storage repo](https://github.com/Infosys/Infosys-Responsible-AI-Toolkit/tree/master/responsible-ai-file-storage). 
-Please find the link for Responsible AI Privacy repo : [Privacy repo](https://github.com/Infosys-AI-Cloud-MMS/responsible-ai-privacy) 
-Please find the link for Responsible AI Safety repo : [Safety repo](https://github.com/Infosys-AI-Cloud-MMS/responsible-ai-safety)
-Please find the link for Responsible AI Moderation layer repo : [Moderation layer repo](https://github.com/Infosys-AI-Cloud-MMS/responsible-ai-fm-ext-flask)
-Please find the link for Responsible AI Explainability repo : [Explainability repo](https://github.com/Infosys-AI-Cloud-MMS/responsible-ai-explain)
+Please find the link for Responsible AI File Storage repo : [File Storage repo](https://github.com/TrustAI/TrustAI-Responsible-AI-Toolkit/tree/master/responsible-ai-file-storage). 
+Please find the link for Responsible AI Privacy repo : [Privacy repo](https://github.com/TrustAI-AI-Cloud-MMS/responsible-ai-privacy) 
+Please find the link for Responsible AI Safety repo : [Safety repo](https://github.com/TrustAI-AI-Cloud-MMS/responsible-ai-safety)
+Please find the link for Responsible AI Moderation layer repo : [Moderation layer repo](https://github.com/TrustAI-AI-Cloud-MMS/responsible-ai-fm-ext-flask)
+Please find the link for Responsible AI Explainability repo : [Explainability repo](https://github.com/TrustAI-AI-Cloud-MMS/responsible-ai-explain)
 
 2. **Installation of Python** : Install Python (version 3.11.x) from the [official website](https://www.python.org/downloads/) and ensure it is added to your system PATH.
 
@@ -275,7 +275,7 @@ The source code for the project is licensed under the MIT license, which you can
 
 ## Contact
 If you have more questions or need further insights please feel free to connect with us at
-DL : Infosys Responsible AI
-Mailid: Infosysraitoolkit@infosys.com
+DL : TrustAI Responsible AI
+Mailid: Infosysraitoolkit@TrustAI.com
 
  

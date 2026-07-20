@@ -1,6 +1,6 @@
 """
 # SPDX-License-Identifier: MIT
-# Copyright 2024 - 2025 Infosys Ltd.
+# Copyright 2024 - 2025 TrustAI Ltd.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
  
@@ -14,7 +14,7 @@ from datetime import datetime
 from typing import Optional, Union, List
 # from SafetyMapper import AccSafetyRequest
 class AccSafetyRequest(BaseModel):
-    portfolio:str=Field(example="Infosys")
+    portfolio:str=Field(example="TrustAI")
     account:str=Field(example="IMPACT")
     drawings:float = Field(example="0.5")
     hentai:float = Field(example="0.5")
@@ -23,7 +23,7 @@ class AccSafetyRequest(BaseModel):
     sexy:float = Field(example="0.5")
     
 class AccMasterRequest(BaseModel):
-    portfolio:str=Field(example="Infosys")
+    portfolio:str=Field(example="TrustAI")
     account:str=Field(example="IMPACT")
     # ptrnList:list=["1689056135.081849","1689056135.4666474"]  adding
     # ThresholdScore:float=Field(example=1.1)
@@ -31,7 +31,7 @@ class AccMasterRequest(BaseModel):
     # safetyRequest:list[AccSafetyRequest] 
 
 class PrivacyParameterRequest(BaseModel):
-    portfolio:str=Field(example="Infosys")
+    portfolio:str=Field(example="TrustAI")
     account:str=Field(example="IMPACT")
     # ptrnList:list=["1689056135.081849","1689056135.4666474"]  adding
     # ThresholdScore:float=Field(example=1.1)

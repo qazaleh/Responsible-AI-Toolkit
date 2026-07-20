@@ -1,6 +1,6 @@
 '''
 MIT license https://opensource.org/licenses/MIT
-Copyright 2024-2025 Infosys Ltd.
+Copyright 2024-2025 TrustAI Ltd.
  
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
  
@@ -36,7 +36,7 @@ import pytest
 from src.service.utility import Utility
 from tensorflow.keras.preprocessing import image
 from keras.models import load_model
-from src.service.service import Infosys,Bulk,AttributeDict
+from src.service.service import TrustAI,Bulk,AttributeDict
 from src.dao.Security.SecReportDb import SecReport
 from src.dao.Batch import Batch
 from src.dao.SaveFileDB import FileStoreDb
@@ -591,7 +591,7 @@ class TestUtility:
         TestUtility.reportDeletion()
         attack = ['MembershipInferenceRule']
         report_path,payload_data = TestUtility.generateDefenceModel(self,attack[0])
-        total_attacks = Infosys.getAttackFuncs({'targetClassifier':'SklearnClassifier','targetDataType':'Tabular'})
+        total_attacks = TrustAI.getAttackFuncs({'targetClassifier':'SklearnClassifier','targetDataType':'Tabular'})
         statusList = [{'MembershipInferenceRule': 53.73134}]
         defenceList = [{'MembershipInferenceRule': 33.33333}]
         rows, attack_list = Utility.makeAttackListRow({'total_attacks':total_attacks,'attackList':attack, 'statusList':statusList,'defenceList':defenceList})
@@ -606,7 +606,7 @@ class TestUtility:
     def test_makeAttackListRow_EvasionAttack(self):
         attack = ['ZerothOrderOptimization']
         report_path,payload_data = TestUtility.generateDefenceModel(self,attack[0])
-        total_attacks = Infosys.getAttackFuncs({'targetClassifier':'SklearnClassifier','targetDataType':'Tabular'})
+        total_attacks = TrustAI.getAttackFuncs({'targetClassifier':'SklearnClassifier','targetDataType':'Tabular'})
         statusList = [{'ZerothOrderOptimization': 53.73134}]
         defenceList = [{'ZerothOrderOptimization': 33.33333}]
         rows, attack_list = Utility.makeAttackListRow({'total_attacks':total_attacks,'attackList':attack, 'statusList':statusList,'defenceList':defenceList})

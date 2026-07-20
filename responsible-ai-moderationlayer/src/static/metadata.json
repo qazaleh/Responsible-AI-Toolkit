@@ -1,14 +1,14 @@
 {
     "openapi": "3.0.0",
     "info": {
-        "title": "Infosys Responsible AI - LLM Moderation - OpenAPI 3.0",
-        "description": "## APIs for LLM Moderation and Filtering to ensure Privacy, Safety, Security, and Transparency. \n\nFind out more @ [Responsible AI Office](https://www.infosys.com/services/data-ai-topaz/offerings/responsible-ai-overview.html)",
+        "title": "TrustAI Responsible AI - LLM Moderation - OpenAPI 3.0",
+        "description": "## APIs for LLM Moderation and Filtering to ensure Privacy, Safety, Security, and Transparency. \n\nFind out more @ [Responsible AI Office](https://www.TrustAI.com/services/data-ai-topaz/offerings/responsible-ai-overview.html)",
         "contact": {
-            "email": "ResponsibleAI@infosys.com"
+            "email": "ResponsibleAI@TrustAI.com"
         },
         "license": {
-            "name": "Infosys",
-            "url": "https://www.infosys.com/"
+            "name": "TrustAI",
+            "url": "https://www.TrustAI.com/"
         },
         "version": "0.0.1"
     },

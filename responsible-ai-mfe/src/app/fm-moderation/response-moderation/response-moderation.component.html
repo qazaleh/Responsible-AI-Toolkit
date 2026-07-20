@@ -1,5 +1,5 @@
 <!-- SPDX-License-Identifier: MIT
-Copyright 2024 - 2025 Infosys Ltd.
+Copyright 2024 - 2025 TrustAI Ltd.
 "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
@@ -34,7 +34,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                             Privacy Check
                         </h5>
                         <div class="d-flex">
-                            <mat-icon class="ms-2 cursor-pointer" style="color: #727272;" [inline]="true" (click)="openRightSideModal({title:'Infosys Privacy Check',type:'PrivacyDesciption'})">info</mat-icon>
+                            <mat-icon class="ms-2 cursor-pointer" style="color: #727272;" [inline]="true" (click)="openRightSideModal({title:'TrustAI Privacy Check',type:'PrivacyDesciption'})">info</mat-icon>
                             <span class="custom-badge" style="margin-left: 7px;" [class.custom-badge-passed]="responseModerationResult.privacyCheck['result'] == 'PASSED'" [class.custom-badge-failed]="responseModerationResult.privacyCheck['result'] == 'FAILED'">
                                 {{responseModerationResult.privacyCheck['result']}}</span>
                         </div>
@@ -57,7 +57,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                     <p class="mainLabel" style="color: #232323;margin: 0px; font-size: small;">
                                         {{responseModerationResult.privacyCheck['entitiesRecognised'] | slice:0:2}}...
                                     </p>
-                                    <a class="mainLabel mainLabelSM mb-0 link" (click)="openRightSideModal({title:'Infosys Privacy Check',type:'privacyCheckRes', openai_result:openAIRes.text})">Show
+                                    <a class="mainLabel mainLabelSM mb-0 link" (click)="openRightSideModal({title:'TrustAI Privacy Check',type:'privacyCheckRes', openai_result:openAIRes.text})">Show
                                         Details({{responseModerationResult.privacyCheck['entitiesRecognised'].length}}
                                         Recognised)</a>
                                 </div>
@@ -73,7 +73,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                             Restricted Topic Check
                         </h5>
                         <div class="d-flex">
-                            <mat-icon class="ms-2 cursor-pointer" style="color: #727272;" [inline]="true" (click)="openRightSideModal({title:'Infosys Restricted Topic Check',type:'RestrictedTopicDesciption'})">info</mat-icon>
+                            <mat-icon class="ms-2 cursor-pointer" style="color: #727272;" [inline]="true" (click)="openRightSideModal({title:'TrustAI Restricted Topic Check',type:'RestrictedTopicDesciption'})">info</mat-icon>
                             <span class="custom-badge" style="margin-left: 7px;" [class.custom-badge-passed]="responseModerationResult.restrictedtopic['result'] == 'PASSED'" [class.custom-badge-failed]="responseModerationResult.restrictedtopic['result'] == 'FAILED'">
                                 {{responseModerationResult.restrictedtopic['result']}}</span>
                         </div>
@@ -111,7 +111,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                             Toxicity Check
                         </h5>
                         <div class="d-flex">
-                            <mat-icon class="ms-2 cursor-pointer" style="color: #727272;" [inline]="true" (click)="openRightSideModal({title:'Infosys Toxicity Check',type:'toxicityCheckRes', openai_result:openAIRes.text ,summaryStatus:summaryStatus})">info</mat-icon>
+                            <mat-icon class="ms-2 cursor-pointer" style="color: #727272;" [inline]="true" (click)="openRightSideModal({title:'TrustAI Toxicity Check',type:'toxicityCheckRes', openai_result:openAIRes.text ,summaryStatus:summaryStatus})">info</mat-icon>
                             <span class="custom-badge" style="margin-left: 7px;" [class.custom-badge-passed]="responseModerationResult.toxicityCheck['result'] == 'PASSED'" [class.custom-badge-failed]="responseModerationResult.toxicityCheck['result'] == 'FAILED'">
                                 {{responseModerationResult.toxicityCheck['result']}}</span>
                         </div>
@@ -134,7 +134,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                     <p class="mainLabel" style="color: #232323;margin: 0px; font-size: small;">
                                         {{responseModerationResult.toxicityCheck['toxicityTypesRecognised'] | slice:0:2}}...
                                     </p>
-                                    <a class="mainLabel mainLabelSM mb-0 link" (click)="openRightSideModal({title:'Infosys Toxicity Check',type:'toxicityCheckRes', openai_result:openAIRes.text ,summaryStatus:summaryStatus})">Show
+                                    <a class="mainLabel mainLabelSM mb-0 link" (click)="openRightSideModal({title:'TrustAI Toxicity Check',type:'toxicityCheckRes', openai_result:openAIRes.text ,summaryStatus:summaryStatus})">Show
                                         Details({{responseModerationResult.toxicityCheck['toxicityTypesRecognised'].length}}
                                         Recognised)</a>
                                 </div>
@@ -148,7 +148,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                         <h5 class="mainLabel d-flex mt-1 mb-1" style="font-size: 0.9rem;
                 color: #303030;">
                             Text Relevance Check
-                            <mat-icon class="ms-2 cursor-pointer" style="color: #727272;" [inline]="true" (click)="openRightSideModal({title:'Infosys Relevance Check',type:'TextRelavanceDesciption'})">info</mat-icon>
+                            <mat-icon class="ms-2 cursor-pointer" style="color: #727272;" [inline]="true" (click)="openRightSideModal({title:'TrustAI Relevance Check',type:'TextRelavanceDesciption'})">info</mat-icon>
                         </h5>
                     </div>
                     <div class="card-body mt-3">
@@ -173,7 +173,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                             Refusal Check
                         </h5>
                         <div class="d-flex">
-                            <mat-icon class="ms-2 cursor-pointer" style="color: #727272;" [inline]="true" (click)="openRightSideModal({title:'Infosys Refusal Check',type:'TextRefusalDesciption'})">info</mat-icon>
+                            <mat-icon class="ms-2 cursor-pointer" style="color: #727272;" [inline]="true" (click)="openRightSideModal({title:'TrustAI Refusal Check',type:'TextRefusalDesciption'})">info</mat-icon>
                             <div class="custom-badge" style="margin-left: 7px;" [class.custom-badge-passed]="responseModerationResult.refusalCheck['result'] == 'PASSED'" [class.custom-badge-failed]="responseModerationResult.refusalCheck['result'] == 'FAILED'">
                                 {{responseModerationResult.refusalCheck['result']}}</div>
                         </div>
@@ -233,7 +233,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                             Profanity Check
                         </h5>
                         <div class="d-flex">
-                            <mat-icon class="ms-2 cursor-pointer" style="color: #727272;" [inline]="true" (click)="openRightSideModal({title:'Infosys Profanity Check',type:'profanityDesciption'})">info</mat-icon>
+                            <mat-icon class="ms-2 cursor-pointer" style="color: #727272;" [inline]="true" (click)="openRightSideModal({title:'TrustAI Profanity Check',type:'profanityDesciption'})">info</mat-icon>
                             <span class="custom-badge" style="margin-left: 7px;" [class.custom-badge-passed]="responseModerationResult.profanityCheck['result'] == 'PASSED'" [class.custom-badge-failed]="responseModerationResult.profanityCheck['result'] == 'FAILED'">
                                 {{responseModerationResult.profanityCheck['result']}}</span>
                         </div>
@@ -247,7 +247,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                     <p class="mainLabel" style="color: #232323;margin: 0px; font-size: small; text-transform: capitalize;">
                                         {{responseModerationResult.profanityCheck['profaneWordsIdentified'] | slice:0:4}}...
                                     </p>
-                                    <a class="mainLabel mainLabelSM mb-0 link" (click)="openRightSideModal({title:'Infosys Profanity Check',type:'profanityCheckReq', text:openAIRes.text})">Show
+                                    <a class="mainLabel mainLabelSM mb-0 link" (click)="openRightSideModal({title:'TrustAI Profanity Check',type:'profanityCheckReq', text:openAIRes.text})">Show
                                         Details({{responseModerationResult.profanityCheck['profaneWordsIdentified'].length}}
                                         Words)</a>
                                 </div>

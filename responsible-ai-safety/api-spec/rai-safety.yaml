@@ -1,6 +1,6 @@
 '''
 MIT license https://opensource.org/licenses/MIT
-Copyright 2024 Infosys Ltd
+Copyright 2024 TrustAI Ltd
  
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
  
@@ -11,16 +11,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 openapi: 3.0.3
 info:
-  title: Infosys Responsible AI - responsible-ai-toxicity - OpenAPI 3.0
+  title: TrustAI Responsible AI - responsible-ai-toxicity - OpenAPI 3.0
   description: |-
-    API specs for Infosys Responsible AI Safety pillar in OpenAPI 3.0 format
+    API specs for TrustAI Responsible AI Safety pillar in OpenAPI 3.0 format
 
-  termsOfService: https://www.infosys.com
+  termsOfService: https://www.TrustAI.com
   contact:
-    email: aina@infosys.com
+    email: aina@TrustAI.com
   license:
-    name: Infosys
-    url: https://www.infosys.com
+    name: TrustAI
+    url: https://www.TrustAI.com
   version: v$version
 servers:
   - url: https://<tba>/api/v0d1
@@ -29,7 +29,7 @@ tags:
     description: Operations required for handling profanity and toxicity in a text/image content.
     externalDocs:
       description: Find out more 
-      url: https://www.infosys.com
+      url: https://www.TrustAI.com
 paths:
   /api/v1/safety/profanity/analyze:
     post:

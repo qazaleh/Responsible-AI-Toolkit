@@ -94,7 +94,8 @@ cmd_ui() {
     print_header "Starting UI Services"
     docker compose -f $COMPOSE_FILE --profile ui up -d
     print_success "UI services started"
-    print_info "Access shell at: http://localhost:30010"
+    print_info "Access Angular shell at: http://localhost:30010"
+    print_info "Access Vue shell at: http://localhost:30011"
 }
 
 cmd_ml() {
@@ -128,7 +129,7 @@ cmd_security() {
 
 cmd_full() {
     print_header "Starting All Services (Full Stack)"
-    print_info "This will start 16 containers - ensure you have sufficient resources"
+    print_info "This will start 18 containers - ensure you have sufficient resources"
     docker compose -f $COMPOSE_FILE \
         --profile ui \
         --profile ml-ops \
@@ -220,7 +221,7 @@ cmd_shell() {
     local service=$1
     if [ -z "$service" ]; then
         print_error "Please specify a service name"
-        print_info "Available services: admin, backend, mfe, shell, etc."
+        print_info "Available services: admin, backend, mfe, shell, mfe-vue, shell-vue, etc."
         exit 1
     fi
     

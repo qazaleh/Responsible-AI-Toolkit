@@ -23,7 +23,7 @@ To run the application, first we need to install Python and the necessary packag
 
 1. Install Python (version 3.11.x) from the [official website](https://www.python.org/downloads/) and ensure it is added to your system PATH.
 
-2. Clone the repository : Infosys-Responsible-AI-Toolkit:
+2. Clone the repository : TrustAI-Responsible-AI-Toolkit:
     ```sh
     git clone <repository-url>
     ```
@@ -157,10 +157,10 @@ Once we have completed all the aforementioned steps, we can start the service.
 2. Do not use this Moderation Model repository as a standalone repository. It serves as the base or dependency for the Moderation Layer repository, which provides the 'Guardrail' functionality, so access this repository APIs through Moderation layer.
 
 ## Docker Image
-The Docker image for the ModerationModel module has been published on Docker Hub. You can access it here: [ModerationModel image](https://hub.docker.com/repository/docker/infosysresponsibleaitoolkit/responsible-ai-moderationmodel)
+The Docker image for the ModerationModel module has been published on Docker Hub. You can access it here: [ModerationModel image](https://hub.docker.com/repository/docker/TrustAIresponsibleaitoolkit/responsible-ai-moderationmodel)
   
 ## License
 The source code for the project is licensed under the MIT license, which you can find in the [LICENSE.txt](LICENSE.txt) file.
 
 ## Contact
-If you have more questions or need further insights please feel free to connect with us @ Infosysraitoolkit@infosys.com
+If you have more questions or need further insights please feel free to connect with us @ Infosysraitoolkit@TrustAI.com

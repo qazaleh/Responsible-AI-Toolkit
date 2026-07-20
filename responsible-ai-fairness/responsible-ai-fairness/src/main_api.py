@@ -1,6 +1,6 @@
 """
 # SPDX-License-Identifier: MIT
-# Copyright 2024 - 2025 Infosys Ltd.
+# Copyright 2024 - 2025 TrustAI Ltd.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
  
@@ -105,9 +105,9 @@ app.add_middleware(XSSProtectionMiddleware)
 """
 incude the routing details of service
 """
-app.include_router(llm_router, prefix='/api/v1', tags=['Infosys Responsible AI - Fairness Analysis in Text and Images'])
-app.include_router(standalone_apis_router, prefix='/api/v1', tags=['Infosys Responsible AI - Analysis and Mitigation for Structured Datasets'])
-app.include_router(workbench_router, prefix='/api/v1', tags=['Infosys Responsible AI - Workbench Compatibile Analysis and Mitigation APIs'])
+app.include_router(llm_router, prefix='/api/v1', tags=['TrustAI Responsible AI - Fairness Analysis in Text and Images'])
+app.include_router(standalone_apis_router, prefix='/api/v1', tags=['TrustAI Responsible AI - Analysis and Mitigation for Structured Datasets'])
+app.include_router(workbench_router, prefix='/api/v1', tags=['TrustAI Responsible AI - Workbench Compatibile Analysis and Mitigation APIs'])
 
 
 if __name__ == "__main__":

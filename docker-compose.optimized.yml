@@ -28,6 +28,8 @@ name: responsible-ai-toolkit-optimized
 #   - backend: Backend API service (Python, port 30019)
 #   - mfe: Micro-frontend application (Node.js, port 30055)
 #   - shell: Main shell/UI application (Node.js, port 30010)
+#   - mfe-vue: Vue micro-frontend application (Node.js, port 30056)
+#   - shell-vue: Vue shell/UI application (Node.js, port 30011)
 #
 # Profile: ml-ops
 #   - model-detail: Model details and workbench (Python, port 30020)
@@ -227,6 +229,71 @@ services:
       - shell_node_modules:/app/node_modules
     ports:
       - "30010:30010"
+    networks:
+      - rai-network
+    restart: unless-stopped
+
+  mfe-vue:
+    container_name: rai-mfe-vue
+    profiles: ["ui"]
+    build:
+      context: ./responsible-ai-mfe-vue
+      dockerfile: Dockerfile
+    depends_on:
+      - admin
+      - backend
+    environment:
+      PORT: "30056"
+      HOMEFILEPATHURL: http://localhost:30056
+      DICOMFILEPATHURL: http://localhost:30056
+      MASTERURL: http://localhost:30016/api/v1/rai/admin/ConfigApi
+      DICE_SERVICE_URL: http://localhost:8004
+      ENABLESEARCH: "true"
+      ENABLEINTERPRET: "true"
+      AUTHORITY_API: http://localhost:30019/v1/rai/backend/pageauthoritynew
+      WEBSOCKET_URL: ws://localhost:5001
+      AUTH_TOKEN: Bearer None
+      SHELL_URL: http://localhost:30011
+      SERVER_API_URL: http://localhost:30019/v1/rai/backend
+      ADMIN_URL: http://localhost:30016
+      FRONTEND_URL: http://localhost:30056
+      CHOKIDAR_USEPOLLING: "true"
+    volumes:
+      - ./responsible-ai-mfe-vue:/app
+      - mfe_vue_node_modules:/app/node_modules
+    ports:
+      - "30056:30056"
+    networks:
+      - rai-network
+    restart: unless-stopped
+
+  shell-vue:
+    container_name: rai-shell-vue
+    profiles: ["ui"]
+    build:
+      context: ./responsible-ai-shell-vue
+      dockerfile: Dockerfile
+    depends_on:
+      - admin
+      - backend
+      - mfe-vue
+    environment:
+      PORT: "30011"
+      SERVER_API_URL: http://localhost:30019/v1/rai/backend
+      FRONTEND_URL: http://localhost:30011
+      ADMIN_URL: http://localhost:30016
+      MASTER_URL: http://localhost:30016/api/v1/rai/admin/ConfigApi
+      LOGIN_USER_NAME: admin
+      LOGIN_USER_CRED: admin
+      MFE_URL: http://localhost:30056
+      SSO_BASED_LOGIN: "false"
+      TELEMETRY_DASHBOARD: ""
+      CHOKIDAR_USEPOLLING: "true"
+    volumes:
+      - ./responsible-ai-shell-vue:/app
+      - shell_vue_node_modules:/app/node_modules
+    ports:
+      - "30011:30011"
     networks:
       - rai-network
     restart: unless-stopped
@@ -611,6 +678,10 @@ volumes:
     name: rai-mfe-node-modules
   shell_node_modules:
     name: rai-shell-node-modules
+  mfe_vue_node_modules:
+    name: rai-mfe-vue-node-modules
+  shell_vue_node_modules:
+    name: rai-shell-vue-node-modules
   moderation_models:
     name: rai-moderation-models
   file_storage_data:

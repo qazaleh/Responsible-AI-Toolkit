@@ -25,7 +25,7 @@ class ApiCall:
             # ApiCall.encryptionList.clear()
             payload=AttributeDict({"portfolio":data.portfolio,"account":data.account})
             
-            # payload={"accName":"Infosys","subAccName":"Impact"}
+            # payload={"accName":"TrustAI","subAccName":"Impact"}
             api_url = os.getenv("PRIVADMIN_API")
             
             # print(api_url)

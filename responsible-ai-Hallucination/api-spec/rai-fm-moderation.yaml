@@ -1,13 +1,13 @@
 openapi: 3.0.1
 info:
-  title: Infosys Responsible AI - LLM Moderation - OpenAPI 3.0
+  title: TrustAI Responsible AI - LLM Moderation - OpenAPI 3.0
   description: |-
-    API specs for Infosys Responsible AI LLM Moderation layer in OpenAPI 3.0 format
+    API specs for TrustAI Responsible AI LLM Moderation layer in OpenAPI 3.0 format
 
   contact:
-    email: infosysraitoolkit@infosys.com
+    email: TrustAIraitoolkit@TrustAI.com
   license:
-    name: Infosys
+    name: TrustAI
   version: 0.0.3
 security:
  - oauth_auth:
@@ -24,7 +24,7 @@ paths:
   /api/v1/moderationlayer/completions:
     post:
       tags:
-        - Infosys Responsible AI - LLM Moderation
+        - TrustAI Responsible AI - LLM Moderation
       summary: Generate Text
       operationId: generate-text-api-v1-moderationlayer-completions-post
       security:
@@ -53,7 +53,7 @@ paths:
   /api/v1/moderationlayer:
     post:
       tags:
-        - Infosys Responsible AI - LLM Moderation
+        - TrustAI Responsible AI - LLM Moderation
       summary: Generate Text
       operationId: generate-text-api-v1-moderationlayer-post
       security:

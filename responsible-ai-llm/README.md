@@ -125,4 +125,4 @@ The source code for the project is licensed under MIT license, which you can fin
 
 ## Contact
 
-If you have more questions or need further insights, feel free to Connect with us @ infosysraitoolkit@infosys.com
+If you have more questions or need further insights, feel free to Connect with us @ TrustAIraitoolkit@TrustAI.com

@@ -1,7 +1,7 @@
 """
 SPDX-License-Identifier: MIT
 
-Copyright 2024 - 2025 Infosys Ltd.
+Copyright 2024 - 2025 TrustAI Ltd.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -39,7 +39,7 @@ app = FastAPI(**read_config_yaml('../config/metadata.yaml'))
     allow_headers - A list of HTTP request headers that should be supported for cross-origin requests. 
                     using ['*'] to allow all headers
 """
-# origins=["http://10.66.155.13:30010/", "http://10.66.155.104:30010/", "https://rai-toolkit-rai.az.ad.idemo-ppc.com/shell", "https://rai-toolkit-test.az.ad.idemo-ppc.com/shell", "https://rai-toolkit-dev.az.ad.idemo-ppc.com/shell", "https://api-aicloud.ad.infosys.com/", "https://infyaiplat.ad.infosys.com/", "https://infyaiplat-tst.ad.infosys.com/", "https://victlpth5-04:8090/"]
+# origins=["http://10.66.155.13:30010/", "http://10.66.155.104:30010/", "https://rai-toolkit-rai.az.ad.idemo-ppc.com/shell", "https://rai-toolkit-test.az.ad.idemo-ppc.com/shell", "https://rai-toolkit-dev.az.ad.idemo-ppc.com/shell", "https://api-aicloud.ad.TrustAI.com/", "https://infyaiplat.ad.TrustAI.com/", "https://infyaiplat-tst.ad.TrustAI.com/", "https://victlpth5-04:8090/"]
 origins=["*"]
 app.add_middleware(
     CORSMiddleware,
@@ -105,7 +105,7 @@ async def http_exception_handler(request, exc):
 incude the routing details of service
 """
 
-app.include_router(router, prefix='/rag/v1', tags=["Infosys Responsible AI - LLM Moderation"])
+app.include_router(router, prefix='/rag/v1', tags=["TrustAI Responsible AI - LLM Moderation"])
 
 if __name__ == "__main__":
     # uvicorn.run(app, host="0.0.0.0", port=9000, ssl_keyfile="./rai.key.pem", ssl_certfile="./rai.crt.pem")

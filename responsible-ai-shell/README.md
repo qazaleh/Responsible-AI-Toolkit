@@ -26,7 +26,7 @@ After installing Node & following above steps, you should be able to run the fol
         After cloning, inspect the package.json file. It contains the list of dependencies required for the application along with their specific versions.
 
 2.	Install Dependencies
-        Navigate to the root folder of the project(e.g., D:\Infosys-Responsible-AI-Toolkit\responsible-ai-shell) and run the following command to install all necessary dependencies:
+        Navigate to the root folder of the project(e.g., D:\TrustAI-Responsible-AI-Toolkit\responsible-ai-shell) and run the following command to install all necessary dependencies:
   	```
   	npm install
     ```
@@ -66,7 +66,7 @@ After installing Node & following above steps, you should be able to run the fol
      fetches configuration values from Nginx during server deployment.
 
 7.	Start the Application
-        In the root folder(e.g., D:\Infosys-Responsible-AI-Toolkit\responsible-ai-shell), run the following command to start the application:
+        In the root folder(e.g., D:\TrustAI-Responsible-AI-Toolkit\responsible-ai-shell), run the following command to start the application:
     ```
   	npm start
     ```

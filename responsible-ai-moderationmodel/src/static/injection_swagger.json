@@ -1,14 +1,14 @@
 {
   "openapi": "3.0.3",
   "info": {
-    "title": "Infosys Responsible AI - LLM Moderation Models - OpenAPI 3.0",
-    "description": "API specs for Infosys Responsible AI LLM Moderation layer Models in OpenAPI 3.0 format",
+    "title": "TrustAI Responsible AI - LLM Moderation Models - OpenAPI 3.0",
+    "description": "API specs for TrustAI Responsible AI LLM Moderation layer Models in OpenAPI 3.0 format",
     "contact": {
-      "email": "aina@infosys.com"
+      "email": "aina@TrustAI.com"
     },
     "license": {
-      "name": "Infosys",
-      "url": "https://www.infosys.com"
+      "name": "TrustAI",
+      "url": "https://www.TrustAI.com"
     },
     "version": "0.0.1"
   },
@@ -24,7 +24,7 @@
             "my_auth": ["write:users"]
         }],
         "tags": [
-          "Infosys Responsible AI - LLM Moderation"
+          "TrustAI Responsible AI - LLM Moderation"
         ],
         "summary": "Prompt Model",
         "operationId": "prompt_model_rai_v1_models_promptinjectionmodel_post",
@@ -389,7 +389,7 @@
       "description": "Operations required for LLM moderation proxy.",
       "externalDocs": {
         "description": "Find out more",
-        "url": "https://www.infosys.com"
+        "url": "https://www.TrustAI.com"
       }
     }
   ]

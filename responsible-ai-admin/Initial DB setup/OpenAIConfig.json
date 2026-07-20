@@ -1704,7 +1704,7 @@
 },
 {
   "_id": 1709203707.819463,
-  "ApiIp": "/v1/infosys/llm/security/datasets",
+  "ApiIp": "/v1/TrustAI/llm/security/datasets",
   "ApiName": "SecurityLLM_availableDataSets",
   "ApiPort": null,
   "CreatedDateTime": {
@@ -1716,7 +1716,7 @@
 },
 {
   "_id": 1709203736.5011249,
-  "ApiIp": "/v1/infosys/llm/security/dataset/preview",
+  "ApiIp": "/v1/TrustAI/llm/security/dataset/preview",
   "ApiName": "SecurityLLM_previewDataSets",
   "ApiPort": null,
   "CreatedDateTime": {
@@ -1728,7 +1728,7 @@
 },
 {
   "_id": 1709203755.5249367,
-  "ApiIp": "/v1/infosys/llm/security/addDataset",
+  "ApiIp": "/v1/TrustAI/llm/security/addDataset",
   "ApiName": "SecurityLLM_addDataSet",
   "ApiPort": null,
   "CreatedDateTime": {
@@ -1740,7 +1740,7 @@
 },
 {
   "_id": 1709203774.9388616,
-  "ApiIp": "/v1/infosys/llm/security/models",
+  "ApiIp": "/v1/TrustAI/llm/security/models",
   "ApiName": "SecurityLLM_availableModels",
   "ApiPort": null,
   "CreatedDateTime": {
@@ -1752,7 +1752,7 @@
 },
 {
   "_id": 1709203796.3983262,
-  "ApiIp": "/v1/infosys/llm/security/addModel",
+  "ApiIp": "/v1/TrustAI/llm/security/addModel",
   "ApiName": "SecurityLLM_addModel",
   "ApiPort": null,
   "CreatedDateTime": {
@@ -1764,7 +1764,7 @@
 },
 {
   "_id": 1709203820.5665798,
-  "ApiIp": "/v1/infosys/llm/security/robustness",
+  "ApiIp": "/v1/TrustAI/llm/security/robustness",
   "ApiName": "SecurityLLM_validateModel",
   "ApiPort": null,
   "CreatedDateTime": {
@@ -1776,7 +1776,7 @@
 },
 {
   "_id": 1709203842.3143325,
-  "ApiIp": "/v1/infosys/llm/security/leaderBoard",
+  "ApiIp": "/v1/TrustAI/llm/security/leaderBoard",
   "ApiName": "SecurityLLM_getLeaderboard",
   "ApiPort": null,
   "CreatedDateTime": {
@@ -1788,7 +1788,7 @@
 },
 {
   "_id": 1709203858.0677817,
-  "ApiIp": "/v1/infosys/llm/security/robustness/results",
+  "ApiIp": "/v1/TrustAI/llm/security/robustness/results",
   "ApiName": "SecurityLLM_robustnessResults",
   "ApiPort": null,
   "CreatedDateTime": {
@@ -1800,7 +1800,7 @@
 },
 {
   "_id": 1709637433.999187,
-  "ApiIp": "/v1/infosys/llm/security/deleteModel",
+  "ApiIp": "/v1/TrustAI/llm/security/deleteModel",
   "ApiName": "SecurityLLM_deleteModel",
   "ApiPort": null,
   "CreatedDateTime": {
@@ -1812,7 +1812,7 @@
 },
 {
   "_id": 1709637450.6561406,
-  "ApiIp": "/v1/infosys/llm/security/deleteDataset",
+  "ApiIp": "/v1/TrustAI/llm/security/deleteDataset",
   "ApiName": "SecurityLLM_deleteDataSet",
   "ApiPort": null,
   "CreatedDateTime": {
@@ -2388,7 +2388,7 @@
 },
 {
   "_id": 1713246870.625191,
-  "ApiIp": "/v1/infosys/llm/security/getExternalRobustnessScore",
+  "ApiIp": "/v1/TrustAI/llm/security/getExternalRobustnessScore",
   "ApiName": "SecurityLLM_ExternalRobustScore",
   "ApiPort": null,
   "CreatedDateTime": {
@@ -2400,7 +2400,7 @@
 },
 {
   "_id": 1713246899.7957458,
-  "ApiIp": "/v1/infosys/llm/security/getExternalAttackScore",
+  "ApiIp": "/v1/TrustAI/llm/security/getExternalAttackScore",
   "ApiName": "SecurityLLM_ExternalAttackScore",
   "ApiPort": null,
   "CreatedDateTime": {
@@ -3960,7 +3960,7 @@
 },
 {
   "_id": 1736162121.5466895,
-  "ApiIp": "/v1/infosys/llm/garak/list_probes",
+  "ApiIp": "/v1/TrustAI/llm/garak/list_probes",
   "ApiName": "llmGarakProbes",
   "ApiPort": null,
   "CreatedDateTime": {
@@ -3972,7 +3972,7 @@
 },
 {
   "_id": 1736162185.711126,
-  "ApiIp": "/v1/infosys/llm/garak/run_garak",
+  "ApiIp": "/v1/TrustAI/llm/garak/run_garak",
   "ApiName": "llmGarakDetails",
   "ApiPort": null,
   "CreatedDateTime": {

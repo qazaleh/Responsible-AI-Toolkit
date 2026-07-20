@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  font-family: 'Outfit', 'Segoe UI', sans-serif;
+  background: #faf7f0;
+}
+
+html,
+body,
+#app {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #faf7f0;
+  color: #0f2b2c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+@layer base {
+  * {
+    border-color: #e6dece;
+  }
+
+  body {
+    @apply antialiased;
+    background:
+      radial-gradient(circle at top left, rgba(250, 234, 177, 0.8), transparent 24%),
+      radial-gradient(circle at bottom right, rgba(48, 86, 105, 0.12), transparent 28%),
+      linear-gradient(180deg, #fffdf8 0%, #faf7f0 100%);
+    color: #0f2b2c;
+  }
+
+  button:not(:disabled),
+  [role='button']:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@layer components {
+  .rai-kicker {
+    @apply text-[11px] font-semibold uppercase tracking-[0.34em];
+    color: rgba(48, 86, 105, 0.72);
+  }
+
+  .rai-card {
+    @apply rounded-2xl border shadow-sm backdrop-blur-xl;
+    border-color: #e6dece;
+    background: rgba(255, 253, 248, 0.94);
+  }
+
+  .rai-card-soft {
+    @apply rounded-xl border backdrop-blur;
+    border-color: #e6dece;
+    background: #faf7f0;
+  }
+
+  .rai-input {
+    @apply h-10 w-full rounded-lg border px-3 text-sm outline-none transition focus:ring-1;
+    border-color: #e6dece;
+    background: #fffdf8;
+    color: #0f2b2c;
+    box-shadow: 0 0 0 0 rgba(48, 86, 105, 0.2);
+  }
+
+  .rai-input::placeholder {
+    color: rgba(48, 86, 105, 0.45);
+  }
+
+  .rai-input:focus,
+  .rai-select:focus,
+  .rai-textarea:focus {
+    border-color: rgba(48, 86, 105, 0.5);
+    box-shadow: 0 0 0 1px rgba(48, 86, 105, 0.2);
+  }
+
+  .rai-select {
+    @apply h-9 rounded-lg border px-3 text-sm outline-none transition focus:ring-1;
+    border-color: #e6dece;
+    background: #fffdf8;
+    color: #305669;
+  }
+
+  .rai-textarea {
+    @apply min-h-32 w-full rounded-lg border px-3 py-3 text-sm outline-none transition focus:ring-1;
+    border-color: #e6dece;
+    background: #fffdf8;
+    color: #0f2b2c;
+  }
+
+  .rai-textarea::placeholder {
+    color: rgba(48, 86, 105, 0.45);
+  }
+
+  .rai-label {
+    @apply mb-2 block text-xs font-medium;
+    color: #305669;
+  }
+
+  .rai-button-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium text-white transition disabled:cursor-not-allowed disabled:opacity-60;
+    background: #305669;
+    box-shadow: 0 10px 30px rgba(48, 86, 105, 0.16);
+  }
+
+  .rai-button-primary:hover {
+    background: #244455;
+  }
+
+  .rai-button-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border px-4 py-2.5 text-sm font-medium transition;
+    border-color: #e6dece;
+    background: #fffdf8;
+    color: #305669;
+  }
+
+  .rai-button-secondary:hover {
+    background: #faf7f0;
+  }
+
+  .rai-button-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition;
+    color: #305669;
+  }
+
+  .rai-button-ghost:hover {
+    background: #faf7f0;
+    color: #0f2b2c;
+  }
+
+  .rai-button-danger {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border px-4 py-2.5 text-sm font-medium transition;
+    border-color: #fecaca;
+    background: #fef2f2;
+    color: #dc2626;
+  }
+
+  .rai-button-danger:hover {
+    background: #fee2e2;
+  }
+
+  .rai-status-pill {
+    @apply inline-flex items-center gap-2 rounded-lg border px-3 py-1.5 text-xs;
+    border-color: #e6dece;
+    background: #faf7f0;
+    color: #305669;
+  }
+
+  .rai-tab {
+    @apply rounded-md border px-4 py-2 text-sm font-medium transition;
+    border-color: #e6dece;
+    background: #fffdf8;
+    color: #305669;
+  }
+
+  .rai-tab:hover {
+    background: #faf7f0;
+    color: #0f2b2c;
+  }
+
+  .rai-tab-active {
+    background: #faeab1;
+    border-color: #f2d774;
+    color: #0f2b2c;
+  }
+
+  .rai-empty {
+    @apply rounded-xl border border-dashed p-6 text-sm leading-6;
+    border-color: #e6dece;
+    background: #faf7f0;
+    color: rgba(48, 86, 105, 0.72);
+  }
+}

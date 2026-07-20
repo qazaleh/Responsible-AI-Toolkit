@@ -29,7 +29,7 @@ Responsible-ai-fairness offers solutions for Traditional AI and LLM's fairness a
 2. pip
 3. Mongo DB
 4. VSCode
-5. infosys_responsible_ai_fairness-1.1.5-py2.py3-none-any.whl file having code to calculate metrics scores for bias analysis using [aif360](https://aif360.readthedocs.io/en/stable/), [Holistic AI](https://github.com/holistic-ai/holisticai), [Fairlearn](https://github.com/fairlearn/fairlearn)
+5. TrustAI_responsible_ai_fairness-1.1.5-py2.py3-none-any.whl file having code to calculate metrics scores for bias analysis using [aif360](https://aif360.readthedocs.io/en/stable/), [Holistic AI](https://github.com/holistic-ai/holisticai), [Fairlearn](https://github.com/fairlearn/fairlearn)
 6. BART-large-mnli is a variant of the BART model specifically fine-tuned for multi-label natural language inference (MNLI) tasks. It features 406 million parameters, a maximum token size of 1024, 24 transformer layers, and a hidden size of 1024.  
 Steps to Download BART-large-mnli:
    1.	Identify the Model URL: Navigate to the BART model page on the Hugging Face Model Hub. For example, for facebook/bart-large, the URL is:
@@ -177,7 +177,7 @@ GEMINI_PRO_MODEL_NAME                | "${gemini_pro_model_name}"            |  
 | VERIFY_SSL | "${verify_ssl}" | Options: True, False | Yes |
 
 ## Features
-For more details refer our [API Documentation](https://github.com/Infosys/Infosys-Responsible-AI-Toolkit/blob/master/responsible-ai-fairness/responsible-ai-fairness/docs/FAIRNESS_API_DOCUMENTATION.pdf)
+For more details refer our [API Documentation](https://github.com/TrustAI/TrustAI-Responsible-AI-Toolkit/blob/master/responsible-ai-fairness/responsible-ai-fairness/docs/FAIRNESS_API_DOCUMENTATION.pdf)
 
 | Model Type                      | Phase         | Function  | Description                                                                 |
 |---------------------------------|---------------|-----------|-----------------------------------------------------------------------------|
@@ -246,7 +246,7 @@ The source code for the project is licensed under the MIT license, which you can
 
 ## Building and Distributing the Python Package as a Wheel (WHL) File
 
-This section outlines the steps to create a distributable Wheel (WHL) file for the `infosys_responsible_ai_python_package` and integrate it into the `responsible_ai_fairness/lib` directory.
+This section outlines the steps to create a distributable Wheel (WHL) file for the `TrustAI_responsible_ai_python_package` and integrate it into the `responsible_ai_fairness/lib` directory.
 
 **Steps:**
 
@@ -256,7 +256,7 @@ This section outlines the steps to create a distributable Wheel (WHL) file for t
     ```
 2.  **Navigate to the Package Directory:**
     ```bash
-    cd infosys_responsible_ai_python_package
+    cd TrustAI_responsible_ai_python_package
     ```
 3.  **Build the Wheel File:**
     ```bash

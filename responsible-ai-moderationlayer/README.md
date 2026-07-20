@@ -33,8 +33,8 @@ This application is built using the Flask web framework.Leveraging the flexibili
 ## Prerequisites
 
 1. Before installing the repo for Moderation Layer, first you need to install the repo for Moderation Models.
-Please find the link for [Moderation Model](https://github.com/Infosys/Infosys-Responsible-AI-Toolkit/tree/main/responsible-ai-ModerationModel).
-If you want to use template based guardrails then use [Admin Module](https://github.com/Infosys/Infosys-Responsible-AI-Toolkit/tree/master/responsible-ai-admin)
+Please find the link for [Moderation Model](https://github.com/TrustAI/TrustAI-Responsible-AI-Toolkit/tree/main/responsible-ai-ModerationModel).
+If you want to use template based guardrails then use [Admin Module](https://github.com/TrustAI/TrustAI-Responsible-AI-Toolkit/tree/master/responsible-ai-admin)
 
 2. **Installation of Python** : Install Python (version 3.11.x) from the [official website](https://www.python.org/downloads/) and ensure it is added to your system PATH.
 
@@ -580,7 +580,7 @@ which can be added as below :
   ```
 
 6. **For the api /rai/v1/moderations/getTemplates/{userid}**
-   - For this , first you need to clone the admin repository. Link mentioned :  [Admin Repo](https://github.com/Infosys/Infosys-Responsible-AI-Toolkit/tree/main/responsible-ai-admin)
+   - For this , first you need to clone the admin repository. Link mentioned :  [Admin Repo](https://github.com/TrustAI/TrustAI-Responsible-AI-Toolkit/tree/main/responsible-ai-admin)
    - Once done, please do the necessary steps to run the admin repo codebase in your local (as mentioned in admin readme file)
    - Go to the API ```api/v1/rai/admin/createCustomeTemplate``` and provide the necessary details to create custom template. The payload is like this :
   
@@ -697,12 +697,12 @@ which can be added as below :
      Gemini-Flash for Gemini 2.5 Flash model
 
 ## Docker Image
-The Docker image for the Moderationlayer module has been published on Docker Hub. You can access it here: [ModerationLayer image](https://hub.docker.com/repository/docker/infosysresponsibleaitoolkit/responsible-ai-moderationlayer)
+The Docker image for the Moderationlayer module has been published on Docker Hub. You can access it here: [ModerationLayer image](https://hub.docker.com/repository/docker/TrustAIresponsibleaitoolkit/responsible-ai-moderationlayer)
   
 ## License
 The source code for the project is licensed under the MIT license, which you can find in the [LICENSE.txt](LICENSE.txt) file.
 
 ## Contact
 If you have more questions or need further insights please feel free to connect with us at
-DL : Infosys Responsible AI
-Mailid: Infosysraitoolkit@infosys.com
+DL : TrustAI Responsible AI
+Mailid: Infosysraitoolkit@TrustAI.com

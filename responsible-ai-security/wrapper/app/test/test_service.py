@@ -1,6 +1,6 @@
 '''
 MIT license https://opensource.org/licenses/MIT
-Copyright 2024-2025 Infosys Ltd.
+Copyright 2024-2025 TrustAI Ltd.
  
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
  
@@ -20,7 +20,7 @@ import os
 import io
 import unittest.mock as mock
 import shutil
-from src.service.service import Infosys,Bulk,AttributeDict
+from src.service.service import TrustAI,Bulk,AttributeDict
 from src.dao.Html import Html
 import datetime,time
 
@@ -97,18 +97,18 @@ class TestService:
 
     def test_getAttackFuncs(self):
         payload = {'targetClassifier': self.targetClassifier, 'targetDataType': self.targetDataType}
-        value = Infosys.getAttackFuncs(payload)
+        value = TrustAI.getAttackFuncs(payload)
         k = 'ZerothOrderOptimization'
         assert k in value
 
     def test_getAttackFuncs_Classifier_None(self):
         payload = {'targetClassifier': None, 'targetDataType': self.targetDataType} 
-        value = Infosys.getAttackFuncs(payload)
+        value = TrustAI.getAttackFuncs(payload)
         assert len(value) == 0 
 
     def test_getAttackFuncs_DataType_None(self):
         payload = {'targetClassifier': self.targetClassifier, 'targetDataType': None} 
-        value = Infosys.getAttackFuncs(payload)
+        value = TrustAI.getAttackFuncs(payload)
         assert len(value) == 0 
 
 # #  # #-------------------------addAttack---------------------
@@ -116,13 +116,13 @@ class TestService:
     def test_addAttack(self):
         payload = {'attackName':'ZerothOrderOptimization','attackDataType':self.targetDataType,'algorithmSupported':self.targetClassifier,'attackFunc':'ZerothOrderOptimization'}
         expectedOutput = 'Attack Already Exists'
-        value = Infosys.addAttack(payload)
+        value = TrustAI.addAttack(payload)
         assert value == expectedOutput
 
     def test_addAttack_None(self):
         payload = {'attackName': None,'attackDataType':None,'algorithmSupported':self.targetClassifier,'attackFunc':'ZerothOrderOptimization'}
         expectedOutPut = 'Attack Addition Failed! Please Try Again'
-        value = Infosys.addAttack(payload)   
+        value = TrustAI.addAttack(payload)   
         assert value == expectedOutPut 
 
 # # #---------------------setAttack-------------------------
@@ -132,7 +132,7 @@ class TestService:
         batchId = TestService.getBatchId(self.modelIdSklearnClassifierTabular,self.dataIdSklearnClassifierTabular,[attackName])
         payload = {"batchId":batchId, "modelUrl":'MembershipInferenceRule'}
         TestService.reportDeletion()
-        response =  Infosys.setAttack(payload)
+        response =  TrustAI.setAttack(payload)
         id = UrlLinks.Current_ID - 1
         k = f'{attackName}_{id}'
         expectedOutput = {"Job_Id":f'{k}'}
@@ -143,7 +143,7 @@ class TestService:
         batchId = TestService.getBatchId(self.modelIdSklearnClassifierTabular,self.dataIdSklearnClassifierTabular,[attackName])
         payload = {"batchId":batchId, "modelUrl":'MembershipInferenceBlackBox'}
         TestService.reportDeletion()
-        response =  Infosys.setAttack(payload)
+        response =  TrustAI.setAttack(payload)
         id = UrlLinks.Current_ID - 1
         k = f'{attackName}_{id}'
         expectedOutput = {"Job_Id":f'{k}'}
@@ -154,7 +154,7 @@ class TestService:
         batchId = TestService.getBatchId(self.modelIdSklearnClassifierTabular,self.dataIdSklearnClassifierTabular,[attackName])
         payload = {"batchId":batchId, "modelUrl":'ZerothOrderOptimization'}
         TestService.reportDeletion()
-        response =  Infosys.setAttack(payload)
+        response =  TrustAI.setAttack(payload)
         id = UrlLinks.Current_ID - 1
         k = f'{attackName}_{id}'
         expectedOutput = {"Job_Id":f'{k}'}
@@ -165,7 +165,7 @@ class TestService:
         batchId = TestService.getBatchId(self.modelIdSklearnClassifierTabular,self.dataIdSklearnClassifierTabular,[attackName])
         payload = {"batchId":batchId, "modelUrl":'HopSkipJumpTabular'}
         TestService.reportDeletion()
-        response =  Infosys.setAttack(payload)
+        response =  TrustAI.setAttack(payload)
         id = UrlLinks.Current_ID - 1
         k = f'{attackName}_{id}'
         expectedOutput = {"Job_Id":f'{k}'}
@@ -176,7 +176,7 @@ class TestService:
         batchId = TestService.getBatchId(self.modelIdSklearnClassifierTabular,self.dataIdSklearnClassifierTabular,[attackName])
         payload = {"batchId":batchId, "modelUrl":'QueryEfficient'}
         TestService.reportDeletion()
-        response =  Infosys.setAttack(payload)
+        response =  TrustAI.setAttack(payload)
         id = UrlLinks.Current_ID - 1
         k = f'{attackName}_{id}'
         expectedOutput = {"Job_Id":f'{k}'}
@@ -187,7 +187,7 @@ class TestService:
         batchId = TestService.getBatchId(self.modelIdSklearnClassifierTabular,self.dataIdSklearnClassifierTabular,[attackName])
         payload = {"batchId":batchId, "modelUrl":'ProjectedGradientDescentTabular'}
         TestService.reportDeletion()
-        response =  Infosys.setAttack(payload)
+        response =  TrustAI.setAttack(payload)
         id = UrlLinks.Current_ID - 1
         k = f'{attackName}_{id}'
         expectedOutput = {"Job_Id":f'{k}'}
@@ -198,7 +198,7 @@ class TestService:
         batchId = TestService.getBatchId(self.modelIdSklearnClassifierTabular,self.dataIdSklearnClassifierTabular,[attackName])
         payload = {"batchId":batchId, "modelUrl":'InferenceLabelOnlyGap'}
         TestService.reportDeletion()
-        response =  Infosys.setAttack(payload)
+        response =  TrustAI.setAttack(payload)
         id = UrlLinks.Current_ID - 1
         k = f'{attackName}_{id}'
         expectedOutput = {"Job_Id":f'{k}'}
@@ -209,7 +209,7 @@ class TestService:
         batchId = TestService.getBatchId(self.modelIdScikitlearnClassifierTabular,self.dataIdScikitlearnClassifierTabular,[attackName])
         payload = {"batchId":batchId, "modelUrl":'AttributeInference'}
         TestService.reportDeletion()
-        response =  Infosys.setAttack(payload)
+        response =  TrustAI.setAttack(payload)
         id = UrlLinks.Current_ID - 1
         k = f'{attackName}_{id}'
         expectedOutput = {"Job_Id":f'{k}'}
@@ -220,7 +220,7 @@ class TestService:
         batchId = TestService.getBatchId(self.modelIdScikitlearnClassifierTabular,self.dataIdScikitlearnClassifierTabular,[attackName])
         payload = {"batchId":batchId, "modelUrl":'AttributeInferenceWhiteBoxDecisionTree'}
         TestService.reportDeletion()
-        response =  Infosys.setAttack(payload)
+        response =  TrustAI.setAttack(payload)
         id = UrlLinks.Current_ID - 1
         k = f'{attackName}_{id}'
         expectedOutput = {"Job_Id":f'{k}'}
@@ -231,7 +231,7 @@ class TestService:
         batchId = TestService.getBatchId(self.modelIdScikitlearnClassifierTabular,self.dataIdScikitlearnClassifierTabular,[attackName])
         payload = {"batchId":batchId, "modelUrl":'AttributeInferenceWhiteBoxLifestyleDecisionTree'}
         TestService.reportDeletion()
-        response =  Infosys.setAttack(payload)
+        response =  TrustAI.setAttack(payload)
         id = UrlLinks.Current_ID - 1
         k = f'{attackName}_{id}'
         expectedOutput = {"Job_Id":f'{k}'}
@@ -242,7 +242,7 @@ class TestService:
         batchId = TestService.getBatchId(self.modelIdScikitlearnClassifierTabular,self.dataIdScikitlearnClassifierTabular,[attackName])
         payload = {"batchId":batchId, "modelUrl":'DecisionTree'}
         TestService.reportDeletion()
-        response =  Infosys.setAttack(payload)
+        response =  TrustAI.setAttack(payload)
         id = UrlLinks.Current_ID - 1
         k = f'{attackName}_{id}'
         expectedOutput = {"Job_Id":f'{k}'}
@@ -253,7 +253,7 @@ class TestService:
         batchId = TestService.getBatchId(self.modelIdScikitlearnClassifierTabular,self.dataIdScikitlearnClassifierTabular,[attackName])
         payload = {"batchId":batchId, "modelUrl":'LabelOnlyDecisionBoundary'}
         TestService.reportDeletion()
-        response =  Infosys.setAttack(payload)
+        response =  TrustAI.setAttack(payload)
         id = UrlLinks.Current_ID - 1
         k = f'{attackName}_{id}'
         expectedOutput = {"Job_Id":f'{k}'}
@@ -264,7 +264,7 @@ class TestService:
         batchId = TestService.getBatchId(self.modelIdKerasClassifierImage,self.dataIdKerasClassifierImage,[attackName])
         payload = {"batchId":batchId, "modelUrl":'BasicIterativeMethod'}
         TestService.reportDeletion()
-        response =  Infosys.setAttack(payload)
+        response =  TrustAI.setAttack(payload)
         id = UrlLinks.Current_ID - 1
         k = f'{attackName}_{id}'
         expectedOutput = {"Job_Id":f'{k}'}
@@ -275,7 +275,7 @@ class TestService:
         batchId = TestService.getBatchId(self.modelIdKerasClassifierImage,self.dataIdKerasClassifierImage,[attackName])
         payload = {"batchId":batchId, "modelUrl":'Boundary'}
         TestService.reportDeletion()
-        response =  Infosys.setAttack(payload)
+        response =  TrustAI.setAttack(payload)
         id = UrlLinks.Current_ID - 1
         k = f'{attackName}_{id}'
         expectedOutput = {"Job_Id":f'{k}'}
@@ -286,7 +286,7 @@ class TestService:
         batchId = TestService.getBatchId(self.modelIdKerasClassifierImage,self.dataIdKerasClassifierImage,[attackName])
         payload = {"batchId":batchId, "modelUrl":'CarliniL2Method'}
         TestService.reportDeletion()
-        response =  Infosys.setAttack(payload)
+        response =  TrustAI.setAttack(payload)
         id = UrlLinks.Current_ID - 1
         k = f'{attackName}_{id}'
         expectedOutput = {"Job_Id":f'{k}'}
@@ -297,7 +297,7 @@ class TestService:
         batchId = TestService.getBatchId(self.modelIdKerasClassifierImage,self.dataIdKerasClassifierImage,[attackName])
         payload = {"batchId":batchId, "modelUrl":'Deepfool'}
         TestService.reportDeletion()
-        response =  Infosys.setAttack(payload)
+        response =  TrustAI.setAttack(payload)
         id = UrlLinks.Current_ID - 1
         k = f'{attackName}_{id}'
         expectedOutput = {"Job_Id":f'{k}'}
@@ -308,7 +308,7 @@ class TestService:
         batchId = TestService.getBatchId(self.modelIdKerasClassifierImage,self.dataIdKerasClassifierImage,[attackName])
         payload = {"batchId":batchId, "modelUrl":'ElasticNet'}
         TestService.reportDeletion()
-        response =  Infosys.setAttack(payload)
+        response =  TrustAI.setAttack(payload)
         id = UrlLinks.Current_ID - 1
         k = f'{attackName}_{id}'
         expectedOutput = {"Job_Id":f'{k}'}
@@ -319,7 +319,7 @@ class TestService:
         batchId = TestService.getBatchId(self.modelIdKerasClassifierImage,self.dataIdKerasClassifierImage,[attackName])
         payload = {"batchId":batchId, "modelUrl":'FastGradientMethod'}
         TestService.reportDeletion()
-        response =  Infosys.setAttack(payload)
+        response =  TrustAI.setAttack(payload)
         id = UrlLinks.Current_ID - 1
         k = f'{attackName}_{id}'
         expectedOutput = {"Job_Id":f'{k}'}
@@ -330,7 +330,7 @@ class TestService:
         batchId = TestService.getBatchId(self.modelIdKerasClassifierImage,self.dataIdKerasClassifierImage,[attackName])
         payload = {"batchId":batchId, "modelUrl":'IterativeFrameSaliency'}
         TestService.reportDeletion()
-        response =  Infosys.setAttack(payload)
+        response =  TrustAI.setAttack(payload)
         id = UrlLinks.Current_ID - 1
         k = f'{attackName}_{id}'
         expectedOutput = {"Job_Id":f'{k}'}
@@ -341,7 +341,7 @@ class TestService:
         batchId = TestService.getBatchId(self.modelIdKerasClassifierImage,self.dataIdKerasClassifierImage,[attackName])
         payload = {"batchId":batchId, "modelUrl":'NewtonFool'}
         TestService.reportDeletion()
-        response =  Infosys.setAttack(payload)
+        response =  TrustAI.setAttack(payload)
         id = UrlLinks.Current_ID - 1
         k = f'{attackName}_{id}'
         expectedOutput = {"Job_Id":f'{k}'}
@@ -352,7 +352,7 @@ class TestService:
         batchId = TestService.getBatchId(self.modelIdKerasClassifierImage,self.dataIdKerasClassifierImage,[attackName])
         payload = {"batchId":batchId, "modelUrl":'SaliencyMapMethod'}
         TestService.reportDeletion()
-        response =  Infosys.setAttack(payload)
+        response =  TrustAI.setAttack(payload)
         id = UrlLinks.Current_ID - 1
         k = f'{attackName}_{id}'
         expectedOutput = {"Job_Id":f'{k}'}
@@ -363,7 +363,7 @@ class TestService:
         batchId = TestService.getBatchId(self.modelIdKerasClassifierImage,self.dataIdKerasClassifierImage,[attackName])
         payload = {"batchId":batchId, "modelUrl":'SimBA'}
         TestService.reportDeletion()
-        response =  Infosys.setAttack(payload)
+        response =  TrustAI.setAttack(payload)
         id = UrlLinks.Current_ID - 1
         k = f'{attackName}_{id}'
         expectedOutput = {"Job_Id":f'{k}'}
@@ -374,7 +374,7 @@ class TestService:
         batchId = TestService.getBatchId(self.modelIdKerasClassifierImage,self.dataIdKerasClassifierImage,[attackName])
         payload = {"batchId":batchId, "modelUrl":'SpatialTransformation'}
         TestService.reportDeletion()
-        response =  Infosys.setAttack(payload)
+        response =  TrustAI.setAttack(payload)
         id = UrlLinks.Current_ID - 1
         k = f'{attackName}_{id}'
         expectedOutput = {"Job_Id":f'{k}'}
@@ -385,7 +385,7 @@ class TestService:
         batchId = TestService.getBatchId(self.modelIdKerasClassifierImage,self.dataIdKerasClassifierImage,[attackName])
         payload = {"batchId":batchId, "modelUrl":'Square'}
         TestService.reportDeletion()
-        response =  Infosys.setAttack(payload)
+        response =  TrustAI.setAttack(payload)
         id = UrlLinks.Current_ID - 1
         k = f'{attackName}_{id}'
         expectedOutput = {"Job_Id":f'{k}'}
@@ -396,7 +396,7 @@ class TestService:
         batchId = TestService.getBatchId(self.modelIdKerasClassifierImage,self.dataIdKerasClassifierImage,[attackName])
         payload = {"batchId":batchId, "modelUrl":'UniversalPerturbation'}
         TestService.reportDeletion()
-        response =  Infosys.setAttack(payload)
+        response =  TrustAI.setAttack(payload)
         id = UrlLinks.Current_ID - 1
         k = f'{attackName}_{id}'
         expectedOutput = {"Job_Id":f'{k}'}
@@ -407,7 +407,7 @@ class TestService:
         batchId = TestService.getBatchId(self.modelIdKerasClassifierImage,self.dataIdKerasClassifierImage,[attackName])
         payload = {"batchId":batchId, "modelUrl":'Wasserstein'}
         TestService.reportDeletion()
-        response =  Infosys.setAttack(payload)
+        response =  TrustAI.setAttack(payload)
         id = UrlLinks.Current_ID - 1
         k = f'{attackName}_{id}'
         expectedOutput = {"Job_Id":f'{k}'}
@@ -418,7 +418,7 @@ class TestService:
         batchId = TestService.getBatchId(self.modelIdSklearnAPIClassifierTabular,self.dataIdSklearnAPIClassifierTabular,[attackName])
         payload = {"batchId":batchId, "modelUrl":'QueryEfficientGradientAttackEndPoint'}
         TestService.reportDeletion()
-        response =  Infosys.setAttack(payload)
+        response =  TrustAI.setAttack(payload)
         id = UrlLinks.Current_ID - 1
         k = f'{attackName}_{id}'
         expectedOutput = {"Job_Id":f'{k}'}
@@ -429,7 +429,7 @@ class TestService:
         batchId = TestService.getBatchId(self.modelIdSklearnAPIClassifierTabular,self.dataIdSklearnAPIClassifierTabular,[attackName])
         payload = {"batchId":batchId, "modelUrl":'BoundaryAttackEndPoint'}
         TestService.reportDeletion()
-        response =  Infosys.setAttack(payload)
+        response =  TrustAI.setAttack(payload)
         id = UrlLinks.Current_ID - 1
         k = f'{attackName}_{id}'
         expectedOutput = {"Job_Id":f'{k}'}
@@ -440,7 +440,7 @@ class TestService:
         batchId = TestService.getBatchId(self.modelIdSklearnAPIClassifierTabular,self.dataIdSklearnAPIClassifierTabular,[attackName])
         payload = {"batchId":batchId, "modelUrl":'HopSkipJumpAttackEndPoint'}
         TestService.reportDeletion()
-        response =  Infosys.setAttack(payload)
+        response =  TrustAI.setAttack(payload)
         id = UrlLinks.Current_ID - 1
         k = f'{attackName}_{id}'
         expectedOutput = {"Job_Id":f'{k}'}
@@ -451,7 +451,7 @@ class TestService:
         batchId = TestService.getBatchId(self.modelIdSklearnAPIClassifierTabular,self.dataIdSklearnAPIClassifierTabular,[attackName])
         payload = {"batchId":batchId, "modelUrl":'LabelOnlyGapAttackEndPoint'}
         TestService.reportDeletion()
-        response =  Infosys.setAttack(payload)
+        response =  TrustAI.setAttack(payload)
         id = UrlLinks.Current_ID - 1
         k = f'{attackName}_{id}'
         expectedOutput = {"Job_Id":f'{k}'}
@@ -462,7 +462,7 @@ class TestService:
         batchId = TestService.getBatchId(self.modelIdSklearnAPIClassifierTabular,self.dataIdSklearnAPIClassifierTabular,[attackName])
         payload = {"batchId":batchId, "modelUrl":'MembershipInferenceBlackBoxRuleBasedAttackEndPoint'}
         TestService.reportDeletion()
-        response =  Infosys.setAttack(payload)
+        response =  TrustAI.setAttack(payload)
         id = UrlLinks.Current_ID - 1
         k = f'{attackName}_{id}'
         expectedOutput = {"Job_Id":f'{k}'}
@@ -473,7 +473,7 @@ class TestService:
         batchId = TestService.getBatchId(self.modelIdSklearnAPIClassifierTabular,self.dataIdSklearnAPIClassifierTabular,[attackName])
         payload = {"batchId":batchId, "modelUrl":'LabelOnlyDecisionBoundaryAttackEndPoint'}
         TestService.reportDeletion()
-        response =  Infosys.setAttack(payload)
+        response =  TrustAI.setAttack(payload)
         id = UrlLinks.Current_ID - 1
         k = f'{attackName}_{id}'
         expectedOutput = {"Job_Id":f'{k}'}
@@ -484,7 +484,7 @@ class TestService:
         batchId = TestService.getBatchId(self.modelIdSklearnAPIClassifierTabular,self.dataIdSklearnAPIClassifierTabular,[attackName])
         payload = {"batchId":batchId, "modelUrl":'MembershipInferenceBlackBoxAttackEndPoint'}
         TestService.reportDeletion()
-        response =  Infosys.setAttack(payload)
+        response =  TrustAI.setAttack(payload)
         id = UrlLinks.Current_ID - 1
         k = f'{attackName}_{id}'
         expectedOutput = {"Job_Id":f'{k}'}
@@ -493,13 +493,13 @@ class TestService:
     def test_setAttack_ModelIdNone(self):
         payload = {"batchId":None, "modelUrl":'MembershipInferenceRule'}
         expectedOutput = {"Oops! Something is Wrong With Input, Please Retry!"} 
-        response = Infosys.setAttack(payload)  
+        response = TrustAI.setAttack(payload)  
         assert response == expectedOutput
 
     def test_setAttack_AttackNone(self):
         batchId = TestService.getBatchId(self.modelIdSklearnClassifierTabular,self.dataIdSklearnClassifierTabular,['None'])
         payload = {"batchId":batchId, "modelUrl":None}
-        response = Infosys.setAttack(payload)  
+        response = TrustAI.setAttack(payload)  
         assert response == None
 
 # #----------------------loadApi----------------------

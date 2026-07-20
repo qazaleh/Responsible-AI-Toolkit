@@ -116,4 +116,4 @@ adversarial-robustness-toolbox : https://github.com/Trusted-AI/adversarial-robus
 
 
 ## Contact
-If you have more questions or need further insights, feel free to Connect with us @ Infosysraitoolkit@infosys.com
+If you have more questions or need further insights, feel free to Connect with us @ Infosysraitoolkit@TrustAI.com

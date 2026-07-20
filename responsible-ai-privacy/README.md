@@ -142,7 +142,7 @@ After installing all the required packages, configure the variables necessary to
    ```
     
     *TELE_FLAG is made true only if user wants to request the response in telemetry. Otherwise for the normal flow it can be set as False.
-    For Telemetry setup, refer this link [responsible-ai-telemetry](https://github.com/Infosys/Infosys-Responsible-AI-Toolkit/tree/master/responsible-ai-telemetry)
+    For Telemetry setup, refer this link [responsible-ai-telemetry](https://github.com/TrustAI/TrustAI-Responsible-AI-Toolkit/tree/master/responsible-ai-telemetry)
     set the below env variables for connecting with telemetry alongside Telemetry flag.
    
    ```sh
@@ -177,7 +177,7 @@ After installing all the required packages, configure the variables necessary to
 Before running the application:
 
 Note: We are currently working on anonymizing PDF content, which will be available in the next release.
-Please comment out the PDF anonymize router (from privacy.service.pdf_service import PDFService) and the privacy file anonymize router (@fileRouter.post('/privacy-files/anonymize')) with its respective import statements (i.e., linenumber 1319-1384 and 1546-1621 in [privacy_router.py](https://github.com/Infosys/Infosys-Responsible-AI-Toolkit/blob/master/responsible-ai-privacy/responsible-ai-privacy/src/privacy/routing/privacy_router.py) file), also comment the [pdf_service.py](https://github.com/Infosys/Infosys-Responsible-AI-Toolkit/blob/master/responsible-ai-privacy/responsible-ai-privacy/src/privacy/service/pdf_service.py)file.
+Please comment out the PDF anonymize router (from privacy.service.pdf_service import PDFService) and the privacy file anonymize router (@fileRouter.post('/privacy-files/anonymize')) with its respective import statements (i.e., linenumber 1319-1384 and 1546-1621 in [privacy_router.py](https://github.com/TrustAI/TrustAI-Responsible-AI-Toolkit/blob/master/responsible-ai-privacy/responsible-ai-privacy/src/privacy/routing/privacy_router.py) file), also comment the [pdf_service.py](https://github.com/TrustAI/TrustAI-Responsible-AI-Toolkit/blob/master/responsible-ai-privacy/responsible-ai-privacy/src/privacy/service/pdf_service.py)file.
 
 Once we have completed all the aforementioned steps, we can start the service.
 
@@ -291,7 +291,7 @@ Once we have completed all the aforementioned steps, we can start the service.
 </table>
 
 ## Docker Image
-The Docker image for the Privacy module has been published on Docker Hub. You can access it here: [Privacy image](https://hub.docker.com/repository/docker/infosysresponsibleaitoolkit/responsible-ai-privacy)
+The Docker image for the Privacy module has been published on Docker Hub. You can access it here: [Privacy image](https://hub.docker.com/repository/docker/TrustAIresponsibleaitoolkit/responsible-ai-privacy)
 
 ## License
 
@@ -299,4 +299,4 @@ The source code for the project is licensed under the MIT license, which you can
 
 ## Contact
 
-If you have more questions or need further insights, feel free to Connect with us @ infosysraitoolkit@infosys.com
+If you have more questions or need further insights, feel free to Connect with us @ TrustAIraitoolkit@TrustAI.com

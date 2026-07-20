@@ -3,9 +3,9 @@
     version: 1.0.3
     build: 0.0.1
     author: Amit Hegde
-    author_email: amitumamaheshwar.h@infosys.com
-    description: Infosys PII Analyzation & Anonymization System
-    long_description: Infosys PII Analyzation & Anonymization System
+    author_email: amitumamaheshwar.h@TrustAI.com
+    description: TrustAI PII Analyzation & Anonymization System
+    long_description: TrustAI PII Analyzation & Anonymization System
     classifiers: ["Programming Language :: Python :: 3",
                   "License :: OSI Approved :: MIT License",
                   "Operating System :: OS Independent",]

@@ -1,5 +1,5 @@
 """
-Copyright 2024-2025 Infosys Ltd.”
+Copyright 2024-2025 TrustAI Ltd.”
 
 Use of this source code is governed by MIT license that can be found in the LICENSE file or at
 MIT license https://opensource.org/licenses/MIT

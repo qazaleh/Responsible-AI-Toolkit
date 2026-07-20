@@ -103,4 +103,4 @@ Once all the steps above are completed, you can start the service.
 The source code for the project is licensed under the MIT license, which you can find in the [LICENSE.md](License.md ) file.
 
 ## Contact
-If you have more questions or need further insights, please feel free to connect with us at infosysraitoolkitt@infosys.com.
+If you have more questions or need further insights, please feel free to connect with us at TrustAIraitoolkitt@TrustAI.com.

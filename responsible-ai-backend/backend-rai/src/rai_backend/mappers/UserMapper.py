@@ -1,6 +1,6 @@
 """
 # SPDX-License-Identifier: MIT
-# Copyright 2024 - 2025 Infosys Ltd.
+# Copyright 2024 - 2025 TrustAI Ltd.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
  
@@ -14,13 +14,13 @@ from pydantic import BaseModel, Field
 from datetime import datetime
 
 class NewUserRequest(BaseModel):
-    email:str = Field(example="abc@infosys.com")
+    email:str = Field(example="abc@TrustAI.com")
     login:str=Field(example="abc")
     cred:str=Field(example="Abc@123")
     langKey:str=Field(example="en")
 
 class NewAuthRequest(BaseModel):
-    username:str=Field(example="abc@infosys.com")
+    username:str=Field(example="abc@TrustAI.com")
     cred:str=Field(example="Abc@123")
     rememberMe:bool=Field(example=True)
 
@@ -46,7 +46,7 @@ class UserData(BaseModel):
     authorities:List=Field(example=["ROLE_ML"])
     createdBy:str=Field(example="system")
     createdDate:datetime=Field(example='2023-06-07T10:56:15.657+00:00')
-    firstName:str=Field(example="abc@infosys.com")
+    firstName:str=Field(example="abc@TrustAI.com")
     id:int= Field(example=3)
     lastModifiedBy:str=Field(example="system")
     lastModifiedDate:datetime=Field(example='2023-06-07T10:56:15.657+00:00')

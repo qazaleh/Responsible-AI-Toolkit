@@ -159,5 +159,5 @@ To create an effective privacy monitoring dashboard:
 The source code for the project is licensed under the MIT license, which you can find in the [LICENSE.txt](License.md) file.
 
 ## Contact
-If you have more questions or need further insights please feel free to connect with us @ Infosysraitoolkit@infosys.com
+If you have more questions or need further insights please feel free to connect with us @ Infosysraitoolkit@TrustAI.com
 

@@ -1,6 +1,6 @@
 '''
 MIT license https://opensource.org/licenses/MIT
-Copyright 2024-2025 Infosys Ltd.
+Copyright 2024-2025 TrustAI Ltd.
  
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
  
@@ -62,7 +62,7 @@ telemetry_flg =os.getenv("TELEMETRY_FLAG")
 apiEndPoint ='/v1/security/model'
 errorRequestMethod = 'GET'
 
-class Infosys:
+class TrustAI:
     
     
     # SelectedModel : str = "Dummy"
@@ -268,7 +268,7 @@ class Infosys:
             print(f"{'='*80}\n")
             log.info(f"=== setAttack() called with attack: {payload.get('modelUrl')}, batchId: {payload.get('batchId')}")
 
-            if(payload['modelUrl'] in Infosys.ArtSupportedModel):
+            if(payload['modelUrl'] in TrustAI.ArtSupportedModel):
                 print(f"✓ Attack '{payload['modelUrl']}' is in ArtSupportedModel list")
                 log.info(f"✓ Attack '{payload['modelUrl']}' is in ArtSupportedModel list")
                 AttackFunction = payload['modelUrl']
@@ -363,7 +363,7 @@ class Infosys:
             else:
                 print(f"✗ CRITICAL: Attack '{payload['modelUrl']}' NOT in ArtSupportedModel list!")
                 log.error(f"✗ CRITICAL: Attack '{payload['modelUrl']}' NOT in ArtSupportedModel list!")
-                print(f"Available attacks: {Infosys.ArtSupportedModel}")
+                print(f"Available attacks: {TrustAI.ArtSupportedModel}")
                 return {"ERROR": f"Attack '{payload['modelUrl']}' not supported"}
 
         except Exception as exc:
@@ -483,7 +483,7 @@ class Bulk:
             if 'Attack' not in collist:
                 log.info("AttackList---",attackList)
                 for attack in attackList:
-                    X = Infosys.addAttack(attack)
+                    X = TrustAI.addAttack(attack)
             
             return
         except Exception as e:
@@ -511,7 +511,7 @@ class Bulk:
             print(f"  Attack: {payload['modelUrl']}")
             print(f"{'='*80}\n")
             
-            response = Infosys.setAttack({"batchId":payload["batchId"], "modelUrl":payload["modelUrl"]})
+            response = TrustAI.setAttack({"batchId":payload["batchId"], "modelUrl":payload["modelUrl"]})
             print(f"setAttack() returned: {response}")
             log.info(f"setAttack() returned: {response}")
             
@@ -686,7 +686,7 @@ class Bulk:
                 }
             
             # get all applicable attack and arrange in list of dictionary
-            total_attacks = Infosys.getAttackFuncs({'targetClassifier':payload_data['targetClassifier'],'targetDataType':payload_data['dataType']})
+            total_attacks = TrustAI.getAttackFuncs({'targetClassifier':payload_data['targetClassifier'],'targetDataType':payload_data['dataType']})
             
             # creating defence model for combining report
             if payload_data['dataType'] == 'Tabular':

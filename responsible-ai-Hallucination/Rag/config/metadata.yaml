@@ -1,7 +1,7 @@
 openapi: 3.0.1
 docs_url: /rag/v1/docs
-title: Infosys Responsible AI - RAG - OpenAPI 3.0
-description: API specs for Infosys Responsible AI RAG in OpenAPI 3.0 format
+title: TrustAI Responsible AI - RAG - OpenAPI 3.0
+description: API specs for TrustAI Responsible AI RAG in OpenAPI 3.0 format
 security:
  - oauth_auth:
       - read: users
@@ -25,9 +25,9 @@ components:
       type: oauth2
       flows:  
 contact:
-  email: infosysraitoolkit@infosys.com
+  email: TrustAIraitoolkit@TrustAI.com
 license_info:
-  name: Infosys
+  name: TrustAI
 version: 0.0.3
 openapi_tags:
   - name: RAG

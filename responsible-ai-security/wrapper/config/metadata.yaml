@@ -1,18 +1,18 @@
 openapi_url: /rai/v1/security_workbench/openapi.json
 docs_url: /rai/v1/security_workbench/docs
-title: Infosys Responsible AI - Security-Workbench - OpenAPI 3.0
-summary: API specs for Infosys Responsible AI Security-Workbench pillar in OpenAPI 3.0 format
-terms_of_service: https://www.infosys.com
+title: TrustAI Responsible AI - Security-Workbench - OpenAPI 3.0
+summary: API specs for TrustAI Responsible AI Security-Workbench pillar in OpenAPI 3.0 format
+terms_of_service: https://www.TrustAI.com
 contact:
-    email: Infosysraitoolkit@infosys.com
+    email: Infosysraitoolkit@TrustAI.com
 license_info:
-    name: Infosys
-    url: https://www.infosys.com
-description: "Copyright \u00A9 2023 Infosys Limited | Internal Communications - HRD"
+    name: TrustAI
+    url: https://www.TrustAI.com
+description: "Copyright \u00A9 2023 TrustAI Limited | Internal Communications - HRD"
 version: v$version
 openapi_tags:
     - name: Model Security
       description: "Operations required for a Model Security"
       externalDocs:
         description: Find out more
-        url: https://www.infosys.com
+        url: https://www.TrustAI.com

@@ -1,6 +1,6 @@
 '''
 MIT license https://opensource.org/licenses/MIT
-Copyright 2024-2025 Infosys Ltd.
+Copyright 2024-2025 TrustAI Ltd.
  
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
  
@@ -29,7 +29,7 @@ from io import BytesIO
 from src.dao.DatabaseConnection import DB
 import json
 import keras
-from src.service.service import Infosys
+from src.service.service import TrustAI
 class AttributeDict(dict):
     __getattr__ = dict.__getitem__
     __setattr__ = dict.__setitem__
@@ -333,6 +333,6 @@ class AddModelData:
         attackList=json.loads(f.read())
         if 'Attack' not in collist:
             for attack in attackList:
-                X = Infosys.addAttack(attack)
+                X = TrustAI.addAttack(attack)
         return               
 

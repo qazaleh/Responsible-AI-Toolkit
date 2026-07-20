@@ -1,6 +1,6 @@
-# Contributing to Infosys-Responsible-AI-Toolkit
+# Contributing to TrustAI-Responsible-AI-Toolkit
 
-🎉 Thank you for your interest in contributing to **Infosys-Responsible-AI-Toolkit!**
+🎉 Thank you for your interest in contributing to **TrustAI-Responsible-AI-Toolkit!**
 
 We appreciate all contributions, whether it's fixing bugs, improving documentation, adding features, or suggesting enhancements.  
 
@@ -9,17 +9,17 @@ Please take a moment to read this guide to ensure a smooth contribution process.
 
 ## 📋 How to Contribute  
 
-There are several ways you can contribute. Please share your contributions via the [Contribution Page](https://github.com/Infosys/Infosys-Responsible-AI-Toolkit/issues) with the appropriate labels, tagging `@InfosysResponsibleAI`.
+There are several ways you can contribute. Please share your contributions via the [Contribution Page](https://github.com/TrustAI/TrustAI-Responsible-AI-Toolkit/issues) with the appropriate labels, tagging `@InfosysResponsibleAI`.
 
-✅ **Report Issues**: Found a bug? open new issue and select [Bug](https://github.com/Infosys/Infosys-Responsible-AI-Toolkit/issues) Template and create a bug.
+✅ **Report Issues**: Found a bug? open new issue and select [Bug](https://github.com/TrustAI/TrustAI-Responsible-AI-Toolkit/issues) Template and create a bug.
 
-✅ **Suggest Features**: Have a great idea? Share it in the [discussions](https://github.com/Infosys/Infosys-Responsible-AI-Toolkit/discussions) page with the `suggest` label. 
+✅ **Suggest Features**: Have a great idea? Share it in the [discussions](https://github.com/TrustAI/TrustAI-Responsible-AI-Toolkit/discussions) page with the `suggest` label. 
 
-✅ **Improve Documentation**: Spotted a typo? Help improve our documentation by creating a new issue with the [documentation](https://github.com/Infosys/Infosys-Responsible-AI-Toolkit/issues) label.   
+✅ **Improve Documentation**: Spotted a typo? Help improve our documentation by creating a new issue with the [documentation](https://github.com/TrustAI/TrustAI-Responsible-AI-Toolkit/issues) label.   
 
-✅ **Fix Bugs**: Help us squash bugs by submitting patches. Create new issue by selecting [Blank Issue](https://github.com/Infosys/Infosys-Responsible-AI-Toolkit/issues) Template and provide the bug fix with appropriate labels.
+✅ **Fix Bugs**: Help us squash bugs by submitting patches. Create new issue by selecting [Blank Issue](https://github.com/TrustAI/TrustAI-Responsible-AI-Toolkit/issues) Template and provide the bug fix with appropriate labels.
 
-✅ **Add Features**: Implement new functionalities to enhance the project. Create new issue and select [Feature](https://github.com/Infosys/Infosys-Responsible-AI-Toolkit/issues) Template to suggest new Feature.
+✅ **Add Features**: Implement new functionalities to enhance the project. Create new issue and select [Feature](https://github.com/TrustAI/TrustAI-Responsible-AI-Toolkit/issues) Template to suggest new Feature.
 
 ➡️ Refer to the guidelines in the **Pull Request Process** section to submit any feature or bug fixes.  
 
@@ -108,12 +108,12 @@ git push origin <new-branch-name>
 
 ### 9. Contribution:
  - Ensure that your contribution license is compatible with the MIT license and that there are no copyleft licenses present, such as GPL, AGPL, LGPL 2.1, MPL 1.0, etc. 
-   If you wish to contribute, please review the [contribution license agreement](https://github.com/Infosys/Infosys-Responsible-AI-Toolkit/blob/master/Contribution%20License%20Agreement.docx) and email a signed PDF of this agreement to infosysraitoolkit@infosys.com. Additionally, 
-   refer to the [release notice](https://github.com/Infosys/Infosys-Responsible-AI-Toolkit/blob/master/Release_Notice.docx) for the permissive licenses used in this project.
+   If you wish to contribute, please review the [contribution license agreement](https://github.com/TrustAI/TrustAI-Responsible-AI-Toolkit/blob/master/Contribution%20License%20Agreement.docx) and email a signed PDF of this agreement to TrustAIraitoolkit@TrustAI.com. Additionally, 
+   refer to the [release notice](https://github.com/TrustAI/TrustAI-Responsible-AI-Toolkit/blob/master/Release_Notice.docx) for the permissive licenses used in this project.
   
 ### 10. Celebrate 🎉
 - Congratulations! You've contributed to an open-source project! 🎉
 
 ## 📜 License
 
-By contributing to this project, you agree that your contributions will be licensed under the project’s [LICENSE](https://github.com/Infosys/Infosys-Responsible-AI-Toolkit/blob/master/LICENSE.md) file.
+By contributing to this project, you agree that your contributions will be licensed under the project’s [LICENSE](https://github.com/TrustAI/TrustAI-Responsible-AI-Toolkit/blob/master/LICENSE.md) file.

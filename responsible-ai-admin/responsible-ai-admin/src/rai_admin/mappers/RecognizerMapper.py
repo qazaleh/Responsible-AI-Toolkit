@@ -1,6 +1,6 @@
 """
 # SPDX-License-Identifier: MIT
-# Copyright 2024 - 2025 Infosys Ltd.
+# Copyright 2024 - 2025 TrustAI Ltd.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
  
@@ -53,7 +53,7 @@ class DataGrpEntity(BaseModel):
 
     
 class DataEntityAdd(BaseModel):
-    EntityNames:list=["Infosys","IBM"]
+    EntityNames:list=["TrustAI","IBM"]
     RecogId:float=Field(example=120.1234)
     
     
@@ -65,7 +65,7 @@ class RecogResponse(BaseModel):
 
 class DataEntity(BaseModel):
     EntityId:float=Field(example="134.234")
-    EntityName:str=Field(example="Infosys")
+    EntityName:str=Field(example="TrustAI")
     RecogId:float=Field(example="234.234")
 class DataEntitiesRequest(BaseModel):
     RecogId:float=Field(example="124.123")
