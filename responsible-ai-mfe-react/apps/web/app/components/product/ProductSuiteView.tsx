@@ -4,8 +4,6 @@ import {
   Activity,
   AlertTriangle,
   ArrowRight,
-  BarChart3,
-  Bot,
   BrainCircuit,
   CheckCircle2,
   Download,
@@ -32,6 +30,7 @@ import {
 } from "@workspace/ui/components/select"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@workspace/ui/components/tabs"
 import { cn } from "@workspace/ui/lib/utils"
+import TrustAiUxApp from "@/components/trustai-ux/TrustAiUxApp"
 
 type ModelConfig = {
   id: number
@@ -63,7 +62,6 @@ const attacks = [
   "Membership Inference Rule",
   "Label Only Gap",
 ]
-const evaluationModules = ["Behavior Analysis", "Explainability", "Safety", "Policy Compliance", "Performance", "Tool Usage"]
 
 function routeMode(pathname: string) {
   if (pathname.includes("trustai-ux")) return "ux"
@@ -464,28 +462,8 @@ function TrustAiX({ notify }: { notify: (message: string) => void }) {
   )
 }
 
-function TrustAiUx({ notify }: { notify: (message: string) => void }) {
-  return (
-    <div className="space-y-5">
-      <PageHeader
-        label="TrustAI-UX"
-        title="AI Agent Evaluation Platform"
-        description="Evaluate agent executions through uploaded logs or API-integrated activity windows."
-        icon={Workflow}
-      />
-      <AgentDashboard />
-      <Tabs defaultValue="agents" className="space-y-5">
-        <TabsList className="h-auto w-full justify-start overflow-x-auto rounded-lg bg-[#faeab1] p-1">
-          <TabsTrigger value="agents" className="h-9 px-3">My Agents</TabsTrigger>
-          <TabsTrigger value="log" className="h-9 px-3">Log-Based Analysis</TabsTrigger>
-          <TabsTrigger value="api" className="h-9 px-3">API-Based Analysis</TabsTrigger>
-        </TabsList>
-        <TabsContent value="agents"><AgentsTable notify={notify} /></TabsContent>
-        <TabsContent value="log"><LogAnalysis notify={notify} /></TabsContent>
-        <TabsContent value="api"><ApiAnalysis notify={notify} /></TabsContent>
-      </Tabs>
-    </div>
-  )
+function TrustAiUx() {
+  return <TrustAiUxApp />
 }
 
 function PageHeader({
@@ -510,147 +488,6 @@ function PageHeader({
         <Icon className="h-6 w-6" />
       </div>
     </div>
-  )
-}
-
-function AgentDashboard() {
-  const stats = [
-    ["Total Agents", "14", Bot],
-    ["Total Evaluations", "82", BarChart3],
-    ["Generated Reports", "31", FileText],
-    ["Recent Activity", "9 today", Activity],
-  ] as const
-
-  return (
-    <div className="grid gap-4 md:grid-cols-4">
-      {stats.map(([label, value, Icon]) => (
-        <Card key={label} className="border-[#e6dece] bg-[#fffdf8] shadow-sm">
-          <CardContent className="flex items-center justify-between pt-1">
-            <div>
-              <p className="text-sm text-[#305669]/70">{label}</p>
-              <p className="mt-1 text-xl font-semibold text-[#0f2b2c]">{value}</p>
-            </div>
-            <Icon className="h-5 w-5 text-[#305669]" />
-          </CardContent>
-        </Card>
-      ))}
-    </div>
-  )
-}
-
-function AgentsTable({ notify }: { notify: (message: string) => void }) {
-  const agents = [
-    ["Claims Review Agent", "Insurance document triage", "API-Based", "12 min ago", "Active", "8"],
-    ["HR Policy Assistant", "Employee policy support", "Log-Based", "Yesterday", "Review", "3"],
-    ["Banking Service Agent", "Customer workflow assistant", "API-Based", "3 days ago", "Active", "12"],
-  ]
-
-  return (
-    <Card className="border-[#e6dece] bg-[#fffdf8] shadow-sm">
-      <CardHeader>
-        <CardTitle>My Agents</CardTitle>
-        <CardDescription>Managed AI agents and their latest evaluation activity.</CardDescription>
-      </CardHeader>
-      <CardContent className="overflow-x-auto">
-        <table className="w-full min-w-[820px] text-left text-sm">
-          <thead className="border-b border-[#e6dece] text-xs uppercase text-[#305669]/70">
-            <tr>{["Agent Name", "Description", "Analysis Type", "Last Activity", "Status", "Reports", "Actions"].map((h) => <th key={h} className="py-3 font-semibold">{h}</th>)}</tr>
-          </thead>
-          <tbody className="divide-y divide-[#e6dece]">
-            {agents.map((row) => (
-              <tr key={row[0]}>
-                {row.map((cell) => <td key={cell} className="py-3 text-[#174143]">{cell}</td>)}
-                <td className="flex gap-2 py-3">
-                  <Button variant="outline" size="sm">View</Button>
-                  <Button variant="outline" size="sm" onClick={() => notify("Agent report generated.")}>Generate Report</Button>
-                  <Button variant="outline" size="sm" className="border-red-200 text-red-700 hover:bg-red-50">Delete</Button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </CardContent>
-    </Card>
-  )
-}
-
-function LogAnalysis({ notify }: { notify: (message: string) => void }) {
-  return (
-    <AnalysisCard
-      title="Log-Based Analysis"
-      description="Upload historical agent execution logs for evaluation."
-      fields={[
-        ["Select Agent", <TextInput key="agent" placeholder="Claims Review Agent" />],
-        ["Upload CSV Log File", <UploadBox key="upload" label="CSV Log File" support="Historical execution logs" />],
-        ["Optional Description", <TextInput key="description" placeholder="Q2 production review" />],
-      ]}
-      outputs={["Analysis Summary", "Detected Sessions", "Risk Summary", "Recommendations"]}
-      action="Start Analysis"
-      onAction={() => notify("Log-based analysis completed.")}
-    />
-  )
-}
-
-function ApiAnalysis({ notify }: { notify: (message: string) => void }) {
-  return (
-    <AnalysisCard
-      title="API-Based Analysis"
-      description="Evaluate agent executions collected through API integration."
-      fields={[
-        ["Select Agent", <TextInput key="agent" placeholder="Banking Service Agent" />],
-        ["Time Range", <SimpleSelect key="time" value="Last 24 Hours" onValueChange={() => null} options={["Last Hour", "Last 24 Hours", "Last 7 Days", "Custom Range"]} />],
-        ["Evaluation Modules", <TextInput key="modules" defaultValue={evaluationModules.join(", ")} />],
-        ["Report Type", <SimpleSelect key="report" value="Full Report" onValueChange={() => null} options={["Executive Summary", "Technical Report", "Full Report"]} />],
-      ]}
-      outputs={["Execution Summary", "Evaluation Results", "Timeline", "Recommendations"]}
-      action="Generate Evaluation"
-      onAction={() => notify("API-based evaluation generated.")}
-    />
-  )
-}
-
-function AnalysisCard({
-  title,
-  description,
-  fields,
-  outputs,
-  action,
-  onAction,
-}: {
-  title: string
-  description: string
-  fields: [string, React.ReactNode][]
-  outputs: string[]
-  action: string
-  onAction: () => void
-}) {
-  return (
-    <Card className="border-[#e6dece] bg-[#fffdf8] shadow-sm">
-      <CardHeader>
-        <CardTitle>{title}</CardTitle>
-        <CardDescription>{description}</CardDescription>
-      </CardHeader>
-      <CardContent className="grid gap-5 lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="space-y-4">
-          {fields.map(([label, field]) => (
-            <Field key={label} label={label}>{field}</Field>
-          ))}
-          <Button onClick={onAction} className="h-10 bg-[#305669] text-white hover:bg-[#244455]">{action}</Button>
-        </div>
-        <div className="rounded-lg border border-[#e6dece] bg-[#faf7f0] p-4">
-          <div className="mb-3 text-sm font-semibold text-[#0f2b2c]">Output</div>
-          <div className="grid gap-2 sm:grid-cols-2">
-            {outputs.map((output) => (
-              <div key={output} className="rounded-lg bg-[#fffdf8] px-3 py-2 text-sm text-[#174143] shadow-xs">{output}</div>
-            ))}
-          </div>
-          <div className="mt-4 flex flex-wrap gap-2">
-            <Button variant="outline"><FileText className="h-4 w-4" />Generate PDF Report</Button>
-            <Button variant="outline"><Download className="h-4 w-4" />Download Report</Button>
-          </div>
-        </div>
-      </CardContent>
-    </Card>
   )
 }
 
@@ -784,7 +621,7 @@ export default function ProductSuiteView() {
   return (
     <div className="mx-auto w-full max-w-7xl">
       {mode === "x" && <TrustAiX notify={notify} />}
-      {mode === "ux" && <TrustAiUx notify={notify} />}
+      {mode === "ux" && <TrustAiUx />}
       {mode === "reports" && <ReportsPage />}
       {mode === "settings" && <SettingsPage />}
       {mode === "home" && <ProductHome />}
