@@ -2,11 +2,11 @@
 
 ## Overview
 
-The **docker-compose.optimized.yml** file provides a streamlined way to run all 15 containerizable modules of the Responsible AI Toolkit with intelligent profile-based grouping.
+The **docker-compose.optimized.yml** file provides a streamlined way to run the Responsible AI Toolkit services with intelligent profile-based grouping.
 
 ### 📦 What's Included
 
-- **15 Microservices** organized into 8 logical profiles
+- **Multiple containerized services** organized into 9 logical profiles
 - **Shared MongoDB** for all services
 - **Dedicated network** for inter-service communication
 - **Named volumes** for persistent data
@@ -29,6 +29,7 @@ The **docker-compose.optimized.yml** file provides a streamlined way to run all 
 | **llm** | llm-explain, llm-benchmarking | LLM services |
 | **security** | security, moderationlayer, moderationmodel | Security & moderation |
 | **storage** | file-storage | File storage and management |
+| **agent-log** | agent-log | Offline AI agent log evaluation |
 
 ### Port Mapping
 
@@ -50,6 +51,7 @@ The **docker-compose.optimized.yml** file provides a streamlined way to run all 
 | moderationlayer | 8000 | 30024 | http://localhost:30024 |
 | moderationmodel | 8000 | 30025 | http://localhost:30025 |
 | file-storage | 8000 | 30026 | http://localhost:30026 |
+| agent-log | 8000 | 30027 | http://localhost:30027 |
 
 ---
 
@@ -128,12 +130,25 @@ docker compose -f docker-compose.optimized.yml \
   --profile llm \
   --profile security \
   --profile storage \
+  --profile agent-log \
   up -d
 ```
 
 ---
 
-### 6. Recommended Development Setup
+### 6. Start Offline Agent Log Evaluation
+
+For TrustAI-UX offline log evaluation without starting the frontend stack.
+
+```bash
+docker compose -f docker-compose.optimized.yml --profile agent-log up -d agent-log
+```
+
+**Services started:** agent-log
+
+---
+
+### 7. Recommended Development Setup
 
 Balanced setup for most development work:
 
@@ -200,7 +215,7 @@ docker compose -f docker-compose.optimized.yml up -d --build llm-explain
 ```
 
 Use Compose service names for these commands. Examples:
-`admin`, `backend`, `mfe`, `shell`, `model-detail`, `reporting-tool`, `ai-explain`, `fairness`, `privacy`, `llm-explain`, `llm-benchmarking`, `security`, `moderationlayer`, `moderationmodel`, `file-storage`, and `mongo`.
+`admin`, `backend`, `mfe`, `shell`, `model-detail`, `reporting-tool`, `ai-explain`, `fairness`, `privacy`, `llm-explain`, `llm-benchmarking`, `security`, `moderationlayer`, `moderationmodel`, `file-storage`, `agent-log`, and `mongo`.
 
 ### Access Service Shell
 

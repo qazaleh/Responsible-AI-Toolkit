@@ -63,6 +63,7 @@ COMMANDS:
     ml              Start UI + ML capabilities (explain, fairness)
     llm             Start UI + LLM services
     security        Start UI + security and moderation services
+    agent-log       Start offline agent log evaluation service
     full            Start all services
     dev             Start recommended development setup (UI + ML-ops + Storage)
     stop            Stop all services
@@ -78,6 +79,7 @@ COMMANDS:
 EXAMPLES:
     $0 ui                    # Start UI services
     $0 ml                    # Start ML services
+    $0 agent-log             # Start agent log evaluator
     $0 logs admin            # Show admin service logs
     $0 restart backend       # Restart backend service
     $0 rebuild ai-explain    # Rebuild explainability service
@@ -127,9 +129,16 @@ cmd_security() {
     print_success "Security services started"
 }
 
+cmd_agent_log() {
+    print_header "Starting Offline Agent Log Evaluation Service"
+    docker compose -f $COMPOSE_FILE --profile agent-log up -d agent-log
+    print_success "Agent log evaluation service started"
+    print_info "Access API at: http://localhost:30027"
+}
+
 cmd_full() {
     print_header "Starting All Services (Full Stack)"
-    print_info "This will start 18 containers - ensure you have sufficient resources"
+    print_info "This will start 21 containers - ensure you have sufficient resources"
     docker compose -f $COMPOSE_FILE \
         --profile ui \
         --profile ml-ops \
@@ -139,6 +148,7 @@ cmd_full() {
         --profile llm \
         --profile security \
         --profile storage \
+        --profile agent-log \
         up -d
     print_success "All services started"
 }
@@ -260,6 +270,9 @@ case "$1" in
         ;;
     security)
         cmd_security
+        ;;
+    agent-log)
+        cmd_agent_log
         ;;
     full)
         cmd_full

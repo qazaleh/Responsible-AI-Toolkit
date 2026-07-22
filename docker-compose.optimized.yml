@@ -57,6 +57,9 @@ name: responsible-ai-toolkit-optimized
 # Profile: storage
 #   - file-storage: File storage and management service (Python, port 30026)
 #
+# Profile: agent-log
+#   - agent-log: Offline AI agent log evaluation service (Python, port 30027)
+#
 # =============================================================================
 # USAGE EXAMPLES:
 # =============================================================================
@@ -71,7 +74,7 @@ name: responsible-ai-toolkit-optimized
 #   docker compose -f docker-compose.optimized.yml --profile ui --profile ml-ops --profile explainability --profile fairness up -d
 #
 # Start everything:
-#   docker compose -f docker-compose.optimized.yml --profile ui --profile ml-ops --profile explainability --profile fairness --profile privacy --profile llm --profile security --profile storage up -d
+#   docker compose -f docker-compose.optimized.yml --profile ui --profile ml-ops --profile explainability --profile fairness --profile privacy --profile llm --profile security --profile storage --profile agent-log up -d
 #
 # Watch logs in real-time:
 #   docker compose -f docker-compose.optimized.yml logs -f {service_name}
@@ -663,6 +666,31 @@ services:
       - file_storage_data:/app/storage
     ports:
       - "30026:8000"
+    networks:
+      - rai-network
+    restart: unless-stopped
+
+  # ===========================================================================
+  # PROFILE: AGENT-LOG (Offline Agent Log Evaluation)
+  # ===========================================================================
+
+  agent-log:
+    container_name: rai-agent-log
+    profiles: ["agent-log"]
+    build:
+      context: ./responsible-ai-agent-log
+      dockerfile: Dockerfile
+      cache_from: ["type=registry,ref=responsible-ai-agent-log:latest"]
+    working_dir: /app/src
+    command: ["python3", "-m", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+    environment:
+      PORT: "8000"
+      ALLOWED_ORIGINS: '["*"]'
+      ALLOWED_METHODS: '["GET","POST","OPTIONS","HEAD"]'
+    volumes:
+      - ./responsible-ai-agent-log:/app
+    ports:
+      - "30027:8000"
     networks:
       - rai-network
     restart: unless-stopped

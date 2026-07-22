@@ -21,6 +21,9 @@ chmod +x rai-docker.sh
 # For security testing
 ./rai-docker.sh security
 
+# For offline agent log evaluation
+./rai-docker.sh agent-log
+
 # For everything
 ./rai-docker.sh full
 ```
@@ -38,7 +41,7 @@ http://localhost:30010
 
 ## What You Get
 
-### ✨ **15 Services Organized in 8 Profiles**
+### ✨ **Services Organized in 9 Profiles**
 
 #### Core (Always Available)
 - **MongoDB** - Shared database
@@ -73,6 +76,9 @@ http://localhost:30010
 
 #### Profile: `storage` (File Storage)
 - **File Storage** - File management (port 30026)
+
+#### Profile: `agent-log` (Offline Agent Evaluation)
+- **Agent Log** - Offline AI agent log evaluation API (port 30027)
 
 ---
 
@@ -158,6 +164,21 @@ http://localhost:30010
 
 ---
 
+### Scenario 6: Offline Agent Log Evaluation
+**Goal:** Evaluate governance-style AI agent execution logs without the frontend
+
+```bash
+./rai-docker.sh agent-log
+```
+
+**Access:**
+- Agent log API: http://localhost:30027
+- Health check: http://localhost:30027/health
+
+**Resources:** ~1GB RAM, 1 CPU core
+
+---
+
 ## Helper Script Commands
 
 ```bash
@@ -166,6 +187,7 @@ http://localhost:30010
 ./rai-docker.sh ml          # ML capabilities
 ./rai-docker.sh llm         # LLM services
 ./rai-docker.sh security    # Security services
+./rai-docker.sh agent-log   # Offline agent log evaluator
 ./rai-docker.sh dev         # Recommended dev setup
 ./rai-docker.sh full        # Everything
 
@@ -190,7 +212,7 @@ http://localhost:30010
 ```
 
 Use Docker Compose service names with `restart` and `rebuild`. Common names are:
-`admin`, `backend`, `mfe`, `shell`, `model-detail`, `reporting-tool`, `ai-explain`, `fairness`, `privacy`, `llm-explain`, `llm-benchmarking`, `security`, `moderationlayer`, `moderationmodel`, `file-storage`, and `mongo`.
+`admin`, `backend`, `mfe`, `shell`, `model-detail`, `reporting-tool`, `ai-explain`, `fairness`, `privacy`, `llm-explain`, `llm-benchmarking`, `security`, `moderationlayer`, `moderationmodel`, `file-storage`, `agent-log`, and `mongo`.
 
 ---
 
@@ -208,6 +230,9 @@ docker compose -f docker-compose.optimized.yml \
 
 # Start UI + LLM
 docker compose -f docker-compose.optimized.yml --profile ui --profile llm up -d
+
+# Start offline agent log evaluator
+docker compose -f docker-compose.optimized.yml --profile agent-log up -d agent-log
 
 # View status
 docker compose -f docker-compose.optimized.yml ps
